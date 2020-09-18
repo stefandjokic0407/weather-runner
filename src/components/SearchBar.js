@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const SearchBar = () => {
-  const [term, setTerm] = useSate('');
+  const [term, setTerm] = useState('');
+
   console.log('I should run');
 
   useEffect(() => {
@@ -20,3 +21,5 @@ const SearchBar = () => {
     </div>
   );
 };
+
+export default SearchBar;
