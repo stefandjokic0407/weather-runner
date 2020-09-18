@@ -6,16 +6,17 @@ const SearchBar = () => {
   console.log('I should run');
 
   useEffect(() => {
-    console.log('Am I working');
+    console.log('I should be working now');
   }, [term]);
 
   return (
     <div>
       {/* add classNames for CSS */}
-      <label>Lets Search Here</label>
+      <label>Weather Runner</label>
       <input
+        placeholder="Find Location"
         value={term}
-        onchange={(e) => setTerm(e.target.value)}
+        onChange={(e) => setTerm(e.target.value)}
         className="input"
       />
     </div>
