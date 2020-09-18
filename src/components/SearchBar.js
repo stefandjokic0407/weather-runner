@@ -11,14 +11,17 @@ const SearchBar = () => {
 
   return (
     <div>
-      {/* add classNames for CSS */}
-      <label>Weather Runner</label>
-      <input
-        placeholder="Find Location"
-        value={term}
-        onChange={(e) => setTerm(e.target.value)}
-        className="input"
-      />
+      <div className="ui form">
+        <div className="field">
+          <label>Weather Runner</label>
+          <input
+            placeholder="Find Location"
+            value={term}
+            onChange={(e) => setTerm(e.target.value)}
+            className="input"
+          />
+        </div>
+      </div>
     </div>
   );
 };
