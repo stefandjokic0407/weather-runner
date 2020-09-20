@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './components/SearchBar';
+import Weather from './components/Weather';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <h1>JUST A PLACEHOLDER</h1>
       </header>
       <SearchBar />
+      <Weather />
     </div>
   );
 }
