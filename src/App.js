@@ -1,14 +1,15 @@
 import React from 'react';
-import SearchBar from './components/SearchBar';
+import './reset.css';
 import './App.css';
+import Weather from './components/Weather/Weather';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>JUST A PLACEHOLDER</h1>
+        <h1>Weather Runner Placeholder</h1>
       </header>
-      <SearchBar />
+      <Weather />
     </div>
   );
 }
