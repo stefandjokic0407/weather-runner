@@ -10,7 +10,9 @@ function App() {
         <h1>JUST A PLACEHOLDER</h1>
       </header>
       <SearchBar />
+      <div className="weather-box">
       <Weather />
+      </div>
     </div>
   );
 }
