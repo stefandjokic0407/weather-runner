@@ -12,7 +12,7 @@ const Weather = () => {
     e.preventDefault();
 
     const apiData = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${APIKEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&APPID=${APIKEY}`
     )
       .then((res) => res.json())
       .then((data) => data);
@@ -22,7 +22,8 @@ const Weather = () => {
         city: apiData.city,
         country: apiData.sys.country,
         description: apiData.weather[0].description,
-        temperature: Math.round((apiData.main.temp * 9) / 5 - 459.67), // Returns temp in F from Kelvin
+        temperature: Math.round((apiData.main.temp  /* 9 */) /* / 5 - 459.67 */), // Returns temp in F from Kelvin
+        wind: Math.round((apiData.wind.speed)),
         error: '',
       });
     } else {
@@ -32,6 +33,7 @@ const Weather = () => {
         country: '',
         description: '',
         temperature: '',
+        wind: '',
         error: alert('Please Type A City And Country'),
       });
     }
@@ -46,6 +48,7 @@ const Weather = () => {
         country={weather.country}
         description={weather.description}
         temperature={weather.temperature}
+        wind={weather.wind}
         error={weather.error}
       />
       {console.log(weather.data)}
