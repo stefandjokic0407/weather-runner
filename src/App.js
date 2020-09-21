@@ -1,5 +1,4 @@
 import React from 'react';
-import './reset.css';
 import './App.css';
 import Weather from './components/Weather/Weather';
 
