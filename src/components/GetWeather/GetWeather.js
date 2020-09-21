@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GetWeather = ({ description, city, country, error, temperature }) => {
+const GetWeather = ({ description, city, country, error, temperature, wind, weather }) => {
   return (
     <div>
       {city && country && (
@@ -9,6 +9,7 @@ const GetWeather = ({ description, city, country, error, temperature }) => {
         </p>
       )}
       {temperature && <p>{temperature}</p>}
+      {wind && <p>{wind} mph</p>}
       {description && <p> {description}</p>}
       {error && <p>{error}</p>}
     </div>
