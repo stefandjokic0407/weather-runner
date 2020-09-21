@@ -1,0 +1,32 @@
+[
+    {
+        "name": "hat",
+        "src": "icons/baseball-cap.png",
+        "type": "image/png"
+    },
+    {
+        "name": "beanie",
+        "src": "icons/beanie.png",
+        "type": "image/png"
+    },
+    {
+        "name": "hoodie",
+        "src": "icons/hoodie.png",
+        "type": "image/png"
+    },
+    {
+        "name": "pants",
+        "src": "icons/pants.png",
+        "type": "image/png" 
+    },
+    {
+        "name": "shirt",
+        "src": "icons/shirt.png",
+        "type": "image/png"
+    },
+    {
+        "name": "shoes",
+        "src": "icons/shoes.png",
+        "type": "image/png"
+    }
+]
