@@ -4,7 +4,7 @@ import SearchBar from '../SearchBar/SearchBar';
 
 const Weather = () => {
   const [weather, setWeather] = useState([]);
-  const APIKEY = '';
+  const APIKEY = '2d90cd2ad195805d051c268178b0923d';
 
   async function fetchData(e) {
     const city = e.target.elements.city.value;
@@ -22,7 +22,7 @@ const Weather = () => {
         city: apiData.city,
         country: apiData.sys.country,
         description: apiData.weather[0].description,
-        temperature: Math.round((apiData.main.temp * 9) / 5 - 459.67),
+        temperature: Math.round((apiData.main.temp * 9) / 5 - 459.67), // Returns temp in F from Kelvin
         error: '',
       });
     } else {
