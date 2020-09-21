@@ -4,7 +4,7 @@ import SearchBar from '../SearchBar/SearchBar';
 
 const Weather = () => {
   const [weather, setWeather] = useState([]);
-  const APIKEY = '';
+  const APIKEY = '2d90cd2ad195805d051c268178b0923d';
 
   async function fetchData(e) {
     const city = e.target.elements.city.value;
