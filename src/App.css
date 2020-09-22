@@ -12,3 +12,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* .weatherlogo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+} */
+
+
+.clothing-box {
+  height: 50vh;
+  width: 100vh;
+}
