@@ -1,4 +1,5 @@
 import React from 'react';
+import Shirt from './icons/shirt.png';
 
 const GetWeather = ({
   description,
@@ -16,7 +17,11 @@ const GetWeather = ({
         </p>
       )}
       <div className="weather">
-        {temperature && <p>{temperature} ℉</p>}
+        {temperature && (
+          <p>
+            {temperature} ℉ <img src={Shirt} alt="Shirt" />
+          </p>
+        )}
         {wind && <p>{wind} mph</p>}
         {description && <p> {description}</p>}
         {error && <p>{error}</p>}
