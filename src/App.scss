@@ -7,6 +7,12 @@ $headerColor: #282c34;
   font-size: xx-large;
 }
 
+.humidity {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
 .description {
   display: flex;
   justify-content: center;
