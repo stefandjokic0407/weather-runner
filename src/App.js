@@ -13,6 +13,7 @@ function App() {
   const yes = () => {
     setLoading(false)
   }
+
   return (
     <div className="App">
       {loading ? <Loading no={no} yes={yes}/> :

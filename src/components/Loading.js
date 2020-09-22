@@ -5,7 +5,6 @@ import './Loading.css'
 const Loading = (props) => {
 const [latitude, setLatitude] = useState(null)
 const [longitude, setLongitude] = useState(null)
-// const [loading, setLoading] = useState(false)
 
 const getLocation = () => {
     if(navigator.geolocation) {
@@ -20,9 +19,7 @@ const getCoordinates = (position) => {
     setLatitude(position.coords.latitude)
     setLongitude(position.coords.longitude) 
 }
-
-// const r
-
+    
     return (
         <div>
             <h1>{longitude}</h1>
