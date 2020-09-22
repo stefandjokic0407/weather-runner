@@ -25,6 +25,7 @@ const Weather = () => {
         image: apiData.weather[0].icon,
         temperature: Math.round((apiData.main.temp  /* 9 */) /* / 5 - 459.67 */), // Returns temp in F from Kelvin
         wind: Math.round((apiData.wind.speed)),
+        humidity: apiData.main.humidity,
         error: '',
       });
     } else {
@@ -36,6 +37,7 @@ const Weather = () => {
         image: '',
         temperature: '',
         wind: '',
+        humidity: '',
         error: alert('Please Type A City And Country'),
       });
     }
@@ -52,6 +54,7 @@ const Weather = () => {
         image={weather.image}
         temperature={weather.temperature}
         wind={weather.wind}
+        humidity={weather.humidity}
         error={weather.error}
       />
       {console.log(weather.data)}
