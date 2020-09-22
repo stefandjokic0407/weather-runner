@@ -22,6 +22,7 @@ const Weather = () => {
         city: apiData.city,
         country: apiData.sys.country,
         description: apiData.weather[0].description,
+        image: apiData.weather[0].icon,
         temperature: Math.round((apiData.main.temp  /* 9 */) /* / 5 - 459.67 */), // Returns temp in F from Kelvin
         wind: Math.round((apiData.wind.speed)),
         error: '',
@@ -32,6 +33,7 @@ const Weather = () => {
         city: '',
         country: '',
         description: '',
+        image: '',
         temperature: '',
         wind: '',
         error: alert('Please Type A City And Country'),
@@ -47,6 +49,7 @@ const Weather = () => {
         city={weather.city}
         country={weather.country}
         description={weather.description}
+        image={weather.image}
         temperature={weather.temperature}
         wind={weather.wind}
         error={weather.error}
