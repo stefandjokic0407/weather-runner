@@ -1,6 +1,7 @@
   import React from 'react';
 import './App.css';
 import Weather from './components/Weather/Weather';
+import Clothing from './components/Clothing/Clothing';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <h1>Weather Runner Placeholder</h1>
       </header>
       <Weather />
+      <Clothing />
     </div>
   );
 }
