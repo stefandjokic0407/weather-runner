@@ -7,7 +7,6 @@ const GetWeather = ({
   error,
   temperature,
   wind,
-  weather,
 }) => {
   return (
     <div>
@@ -16,10 +15,12 @@ const GetWeather = ({
           {city}, {country}
         </p>
       )}
-      {temperature && <p>{temperature}</p>}
-      {wind && <p>{wind} mph</p>}
-      {description && <p> {description}</p>}
-      {error && <p>{error}</p>}
+      <div className="weather">
+        {temperature && <p>{temperature} ℉</p>}
+        {wind && <p>{wind} mph</p>}
+        {description && <p> {description}</p>}
+        {error && <p>{error}</p>}
+      </div>
     </div>
   );
 };
