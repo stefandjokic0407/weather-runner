@@ -24,7 +24,7 @@ function App() {
       <Weather />
       <Clothing />
       </div>
-    </div>
+}</div>
   );
 }
 export default App;
