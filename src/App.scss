@@ -1,9 +1,19 @@
+$headerColor: #282c34;
+
+.weather {
+  background-color: rgb(163, 159, 159);
+  /* display: inline-block;
+  margin-top: 100px; */
+  /* height: 250px;
+  width: 300px; */
+}
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $headerColor;
   min-height: 15vh;
   display: flex;
   flex-direction: column;
