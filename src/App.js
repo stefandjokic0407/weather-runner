@@ -24,7 +24,7 @@ function App() {
       </header>
       <Weather />
       <Clothing />
-      </div>
+      </div>}
     </div>
   );
 }
