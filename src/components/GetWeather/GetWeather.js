@@ -1,6 +1,14 @@
 import React from 'react';
 
-const GetWeather = ({ description, city, country, error, temperature, wind, weather }) => {
+const GetWeather = ({
+  description,
+  city,
+  country,
+  error,
+  temperature,
+  wind,
+  weather,
+}) => {
   return (
     <div>
       {city && country && (
