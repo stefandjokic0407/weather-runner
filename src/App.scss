@@ -1,11 +1,22 @@
 $headerColor: #282c34;
 
-.weather {
-  background-color: rgb(163, 159, 159);
-  /* display: inline-block;
-  margin-top: 100px; */
-  /* height: 250px;
-  width: 300px; */
+.temp {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+  font-size: xx-large;
+}
+
+.humidity {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  margin-top: -18px;
 }
 
 .App {
