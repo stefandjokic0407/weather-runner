@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Clothing from '../Clothing/Clothing';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
 
@@ -39,6 +40,7 @@ const Weather = () => {
     }
   }
 
+
   return (
     <div className="App">
       <h3>Please Enter City and Country</h3>
@@ -51,6 +53,7 @@ const Weather = () => {
         wind={weather.wind}
         error={weather.error}
       />
+      <Clothing temp={weather.temperature} />
       {console.log(weather.data)}
     </div>
   );
