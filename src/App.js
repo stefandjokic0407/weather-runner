@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
 import Loading from './components/Loading';
 import Weather from './components/Weather/Weather';
 import Clothing from './components/Clothing/Clothing';
+import './App.scss'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -24,8 +24,8 @@ function App() {
       </header>
       <Weather />
       <Clothing />
-      </div>}
-    </div>
+      </div>
+}</div>
   );
 }
 export default App;
