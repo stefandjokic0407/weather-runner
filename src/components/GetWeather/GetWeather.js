@@ -1,4 +1,5 @@
 import React from 'react';
+import Clothing from '../Clothing/Clothing';
 
 const GetWeather = ({
   description,
@@ -25,6 +26,7 @@ const GetWeather = ({
         {description && <p className="description"> {description}</p>}
         {error && <p>{error}</p>}
       </div>
+      <Clothing temp={temperature} />
     </div>
   );
 };
