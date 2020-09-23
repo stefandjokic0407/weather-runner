@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GetWeather = ({ description, city, country, error, temperature, wind, weather }) => {
+const GetWeather = ({ description, city, country, error, temperature, wind, humidity, image}) => {
   return (
     <div>
       {city && country && (
@@ -8,10 +8,14 @@ const GetWeather = ({ description, city, country, error, temperature, wind, weat
           {city}, {country}
         </p>
       )}
-      {temperature && <p>{temperature}</p>}
-      {wind && <p>{wind} mph</p>}
-      {description && <p> {description}</p>}
+      <div className="weather">
+      <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
+      {temperature && <p className="temp">{temperature} ℉ </p>}
+      {wind && <p>Wind: {wind} mph</p>}
+      {humidity && <p className="humidity">Humidity: {humidity}%</p>}
+      {description && <p className="description"> {description}</p>}
       {error && <p>{error}</p>}
+      </div>
     </div>
   );
 };
