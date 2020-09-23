@@ -23,7 +23,6 @@ function App() {
             <h1>Weather Runner Placeholder</h1>
           </header>
           <Weather />
-          <Clothing />
         </div>
       )}
     </div>
