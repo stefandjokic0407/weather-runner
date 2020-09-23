@@ -3,6 +3,7 @@ import Clothing from '../Clothing/Clothing';
 
 const GetWeather = ({ description, city, country, error, temperature, wind, humidity, image}) => {
 
+
   return (
     <div>
       {city && country && (
