@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Loading.scss';
+import ReactWeather from 'react-open-weather-widget';
 
 const Loading = (props) => {
   const [latitude, setLatitude] = useState(null);
@@ -35,6 +36,12 @@ const Loading = (props) => {
       <button onClick={getLocation}>Get</button>
       <button onClick={props.yes}>Yes</button>
       <button onClick={props.no}>No</button>
+      <ReactWeather
+        forecast="5days"
+        apikey="2d90cd2ad195805d051c268178b0923d"
+        type="city"
+        city="Dallas"
+      />
     </div>
   );
 };
