@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Clothing from '../Clothing/Clothing';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
 
 const Weather = () => {
   const [weather, setWeather] = useState([]);
+  const [isShowing] = useState(true);
   const APIKEY = '2d90cd2ad195805d051c268178b0923d';
 
   async function fetchData(e) {
@@ -49,7 +49,8 @@ const Weather = () => {
     <div className="App">
       <h3>Please Enter City and Country</h3>
       <SearchBar getWeather={fetchData} />
-      <GetWeather
+      {isShowing ? 
+        <GetWeather
         city={weather.city}
         country={weather.country}
         description={weather.description}
@@ -58,8 +59,10 @@ const Weather = () => {
         wind={weather.wind}
         humidity={weather.humidity}
         error={weather.error}
-      />
-      <Clothing temp={weather.temperature} />
+        />
+      : 
+        null
+      }
       {console.log(weather.data)}
     </div>
   );
