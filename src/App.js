@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.scss';
 import Loading from './components/Loading';
 import Weather from './components/Weather/Weather';
-import Clothing from './components/Clothing/Clothing';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +23,6 @@ function App() {
             <h1>Weather Runner Placeholder</h1>
           </header>
           <Weather />
-          <Clothing />
         </div>
       )}
     </div>
