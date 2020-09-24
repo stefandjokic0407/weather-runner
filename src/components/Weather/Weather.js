@@ -24,9 +24,10 @@ const Weather = () => {
         country: apiData.sys.country,
         description: apiData.weather[0].description,
         image: apiData.weather[0].icon,
-        temperature: Math.round(apiData.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
+        temperature: Math.round(apiData.main.temp),
         wind: Math.round(apiData.wind.speed),
         humidity: apiData.main.humidity,
+
         error: '',
       });
     } else {
@@ -44,25 +45,22 @@ const Weather = () => {
     }
   }
 
-
   return (
     <div className="App">
       <h3>Please Enter City and Country</h3>
       <SearchBar getWeather={fetchData} />
-      {isShowing ? 
+      {isShowing ? (
         <GetWeather
-        city={weather.city}
-        country={weather.country}
-        description={weather.description}
-        image={weather.image}
-        temperature={weather.temperature}
-        wind={weather.wind}
-        humidity={weather.humidity}
-        error={weather.error}
+          city={weather.city}
+          country={weather.country}
+          description={weather.description}
+          image={weather.image}
+          temperature={weather.temperature}
+          wind={weather.wind}
+          humidity={weather.humidity}
+          error={weather.error}
         />
-      : 
-        null
-      }
+      ) : null}
       {console.log(weather.data)}
     </div>
   );
