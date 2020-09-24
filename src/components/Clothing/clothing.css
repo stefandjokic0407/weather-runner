@@ -1,0 +1,29 @@
+.hat {
+    display: flex;
+    align-items: center;
+}
+
+.sunglasses {
+    display: flex;
+    align-items: center;
+}
+
+.shirt {
+    display: flex;
+    align-items: center;
+}
+
+.shorts {
+    display: flex;
+    align-items: center;
+}
+
+.shoes {
+    display: flex;
+    align-items: center;
+}
+
+.water {
+    display: flex;
+    align-items: center;
+}
