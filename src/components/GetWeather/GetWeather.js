@@ -26,7 +26,7 @@ const GetWeather = ({
         {description && <p className="description"> {description}</p>}
         {error && <p>{error}</p>}
       </div>
-      <Clothing temp={temperature} />
+      <Clothing temp={temperature} desc={description} />
     </div>
   );
 };
