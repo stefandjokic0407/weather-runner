@@ -1,4 +1,5 @@
 import { findAllByAltText } from '@testing-library/react';
+import './Weather.scss';
 import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
@@ -8,54 +9,53 @@ const Weather = () => {
   const [isShowing] = useState(true);
   const APIKEY = '2d90cd2ad195805d051c268178b0923d';
   const getLocation = () => {
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(getCoordinates)
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getCoordinates);
     } else {
-      alert('not supported')
+      alert('not supported');
     }
+  };
+  useEffect(() => {
+    getLocation();
+  }, []);
+  async function getCoordinates(position) {
+    // console.log(position);
+    // props.yes()
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const api = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKEY}`
+    )
+      .then((res) => res.json())
+      .then((api) => {
+        setWeather({
+          data: api,
+          city: api.city,
+          country: api.sys.country,
+          description: api.weather[0].description,
+          image: api.weather[0].icon,
+          temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
+          wind: Math.round(api.wind.speed),
+          humidity: api.main.humidity,
+          error: '',
+        });
+      });
+    //  .then((data) => data);
+    // if (latitude && longitude) {
+    // } else {
+    //   setWeather({
+    //     data: '',
+    //   city: '',
+    //   country: '',
+    //   description: '',
+    //   image: '',
+    //   temperature: '',
+    //   wind: '',
+    //   humidity: '',
+    //   error: alert('Please turn on location'),
+    // });
+    // }
   }
-useEffect(() => {
-  getLocation()
-}, [])
-async function getCoordinates(position) {
-  // console.log(position);
-  // props.yes()
-  const latitude = position.coords.latitude
-  const longitude = position.coords.longitude
- const api = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKEY}`)
- .then((res) => res.json())
- .then(api => {
-
-   setWeather({
-     data: api,
-     city: api.city,
-     country: api.sys.country,
-     description: api.weather[0].description,
-     image: api.weather[0].icon,
-     temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
-     wind: Math.round(api.wind.speed),
-     humidity: api.main.humidity,
-     error: '',
-   });
-
- })
-//  .then((data) => data);
-// if (latitude && longitude) {
-// } else {
-//   setWeather({
-//     data: '',
-  //   city: '',
-  //   country: '',
-  //   description: '',
-  //   image: '',
-  //   temperature: '',
-  //   wind: '',
-  //   humidity: '',
-  //   error: alert('Please turn on location'),
-  // });
-// }
-}
-
 
   async function fetchData(e) {
     const city = e.target.elements.city.value;
