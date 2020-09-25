@@ -26,7 +26,7 @@ const GetWeather = ({ description, city, country, error, temperature, wind, humi
       </div>
       <div className="clothing-box">
       <h1>Clothing For Your Run</h1>
-      <Clothing temp={temperature} desc={description} main={main}/>
+      <Clothing temp={temperature} main={main} image={image}/>
       </div>
     </div>
   );

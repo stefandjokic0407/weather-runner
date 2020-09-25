@@ -1,9 +1,10 @@
 import React from 'react';
-import './Clothing.scss';
+import './clothing.scss';
 
 function Clothing(props) {
     const temp = props.temp;
     const main = props.main;
+    const image = props.image;
     console.log(props)
     let clothes;
     if(temp === undefined){
@@ -108,10 +109,10 @@ function Clothing(props) {
                 <p>Even if it is raining, STAY HYDRATED!</p>
             </span>
         </div>
-    } else if(temp <= 89 && temp >= 60 && main === "Thunderstorm" ) {
+    } else if(temp > 90 && main === "Thunderstorm" ) {
         return clothes =
         <div>
-            <img src="/icons/storm.png" alt="Storming"/>
+            <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
         </div>
     } else if(temp <= 89 && temp >= 60 && main === "Clear"){
@@ -193,7 +194,7 @@ function Clothing(props) {
     } else if(temp <= 89 && temp >= 60 && main === "Thunderstorm" ) {
         return clothes =
         <div>
-            <img src="/icons/storm.png" alt="Storming"/>
+            <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
         </div>
     } else if(temp <=59 && temp >= 0 && main === "Clear") {
@@ -278,8 +279,7 @@ function Clothing(props) {
         </div>
     };
 
-    return <div className="clothing-box">
-        <h1> Clothing For Your Run </h1>
+    return <div>
         {clothes}
     </div>
 }
