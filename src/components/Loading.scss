@@ -1,17 +1,18 @@
 
 .loading-logo {
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
     display: block;
     position: fixed;
-    /* top: 50%; */
-    left: 70%;
+    left: 35%;
+    top: 40%;
     animation-name: spin;
     animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
 }
+
  @keyframes spin {
      from {
         transform: rotate(0deg);

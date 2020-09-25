@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.scss';
 import Loading from './components/Loading';
 import Weather from './components/Weather/Weather';
 
