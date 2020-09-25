@@ -7,18 +7,19 @@ input {
   border-radius: 15px;
   text-align: center;
   background: white;
+  margin-right: 5px;
 }
 
 input:focus {
-  background: pink;
-  border: 1px solid grey;
+  background: rgb(80, 85, 94);
+  border: 1px solid black;
 }
 
 button {
   border-radius: 15px;
-  background-color: #cecef0;
+  background-color: white;
 }
 
 button:focus {
-  background: pink;
+  background: rgb(80, 85, 94);
 }

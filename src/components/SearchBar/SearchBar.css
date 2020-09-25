@@ -1,0 +1,20 @@
+.input-boxes {
+  display: flex;
+  justify-content: center; }
+
+input {
+  border-radius: 15px;
+  text-align: center;
+  background: white;
+  margin-right: 5px; }
+
+input:focus {
+  background: #50555e;
+  border: 1px solid black; }
+
+button {
+  border-radius: 15px;
+  background-color: white; }
+
+button:focus {
+  background: #50555e; }

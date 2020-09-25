@@ -1,0 +1,21 @@
+.clothing-box {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 70%;
+  border: 3px solid black; }
+
+.clothing-box h1 {
+  text-align: center; }
+
+.clothing-box span {
+  display: flex;
+  align-items: center;
+  align-content: space-around; }
+
+.clothing-box img {
+  padding: 15px 0px 15px 100px; }
+
+.clothing-box p {
+  padding-left: 150px;
+  padding-right: 50px; }
