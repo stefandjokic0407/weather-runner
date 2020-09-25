@@ -24,33 +24,36 @@ async function getCoordinates(position) {
   const longitude = position.coords.longitude
  const api = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIKEY}`)
  .then((res) => res.json())
- .then(res => console.log(res))
- .then((data) => data);
-if (latitude && longitude) {
- setWeather({
-   data: api,
-   city: api.city,
-   country: api.sys.country,
-   description: api.weather[0].description,
-   image: api.weather[0].icon,
-   temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
-   wind: Math.round(api.wind.speed),
-   humidity: api.main.humidity,
-   error: '',
- });
-} else {
-  setWeather({
-    data: '',
-    city: '',
-    country: '',
-    description: '',
-    image: '',
-    temperature: '',
-    wind: '',
-    humidity: '',
-    error: alert('Please turn on location'),
-  });
-}
+ .then(api => {
+
+   setWeather({
+     data: api,
+     city: api.city,
+     country: api.sys.country,
+     description: api.weather[0].description,
+     image: api.weather[0].icon,
+     temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
+     wind: Math.round(api.wind.speed),
+     humidity: api.main.humidity,
+     error: '',
+   });
+
+ })
+//  .then((data) => data);
+// if (latitude && longitude) {
+// } else {
+//   setWeather({
+//     data: '',
+  //   city: '',
+  //   country: '',
+  //   description: '',
+  //   image: '',
+  //   temperature: '',
+  //   wind: '',
+  //   humidity: '',
+  //   error: alert('Please turn on location'),
+  // });
+// }
 }
 
 
