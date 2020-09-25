@@ -40,20 +40,20 @@ async function getCoordinates(position) {
 
  })
 //  .then((data) => data);
-// if (latitude && longitude) {
-// } else {
-//   setWeather({
-//     data: '',
-  //   city: '',
-  //   country: '',
-  //   description: '',
-  //   image: '',
-  //   temperature: '',
-  //   wind: '',
-  //   humidity: '',
-  //   error: alert('Please turn on location'),
-  // });
-// }
+if (latitude && longitude) {
+} else {
+  setWeather({
+    data: '',
+    city: '',
+    country: '',
+    description: '',
+    image: '',
+    temperature: '',
+    wind: '',
+    humidity: '',
+    error: alert('Please turn on location'),
+  });
+}
 }
 
 

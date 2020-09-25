@@ -29,17 +29,14 @@ const getCoordinates = (position) => {
         alt="weather-runner-logo"
         src="https://cdn.discordapp.com/attachments/756212437606203542/756284007917944882/runner-logo.jpg"
       />
+      <div className='loading-text'>
       <h1>Allow us to access your location?</h1>
-      <button onClick={getLocation}>Yes</button>
-      <button onClick={props.no}>Search my Location</button>
-      {/* <ReactWeather
-        forecast="5days"
-        apikey="2d90cd2ad195805d051c268178b0923d"
-        type="city"
-        city="Dallas" */}
-      {/* /> */}
+      <button classname='loading-button' onClick={getLocation}>Yes</button>
+      <button className='loading-button' onClick={props.no}>Search my Location</button>
+      </div>
     </div>
   );
 };
 
 export default Loading;
+
