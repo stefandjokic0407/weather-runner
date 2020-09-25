@@ -20,7 +20,7 @@ function App() {
       ) : (
         <div>
           <header className="App-header">
-            <h1>Weather Runner Placeholder</h1>
+            <h1>Weather Runner</h1>
           </header>
           <Weather />
         </div>
