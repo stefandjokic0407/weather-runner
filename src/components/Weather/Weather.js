@@ -28,6 +28,7 @@ async function getCoordinates(position) {
 
    setWeather({
      data: api,
+     name: api.name,
      city: api.city,
      country: api.sys.country,
      description: api.weather[0].description,
@@ -70,6 +71,7 @@ async function getCoordinates(position) {
     if (city && country) {
       setWeather({
         data: apiData,
+        name: apiData.name,
         city: apiData.city,
         country: apiData.sys.country,
         description: apiData.weather[0].description,
@@ -82,6 +84,7 @@ async function getCoordinates(position) {
     } else {
       setWeather({
         data: '',
+        name: '',
         city: '',
         country: '',
         description: '',
@@ -101,6 +104,7 @@ async function getCoordinates(position) {
       <SearchBar getWeather={fetchData} />
       {isShowing ? 
         <GetWeather
+        name={weather.name}
         city={weather.city}
         country={weather.country}
         description={weather.description}
