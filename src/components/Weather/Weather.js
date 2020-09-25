@@ -74,6 +74,7 @@ async function getCoordinates(position) {
      city: api.city,
      country: api.sys.country,
      description: api.weather[0].description,
+     main: api.weather[0].main,
      image: api.weather[0].icon,
      temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
      wind: Math.round(api.wind.speed),
@@ -117,6 +118,7 @@ async function getCoordinates(position) {
         city: apiData.city,
         country: apiData.sys.country,
         description: apiData.weather[0].description,
+        main: apiData.weather[0].main,
         image: apiData.weather[0].icon,
         temperature: Math.round(apiData.main.temp),
         wind: Math.round(apiData.wind.speed),
@@ -132,6 +134,7 @@ async function getCoordinates(position) {
         country: '',
         description: '',
         image: '',
+        main: '',
         temperature: '',
         wind: '',
         humidity: '',
@@ -155,6 +158,7 @@ async function getCoordinates(position) {
         wind={weather.wind}
         humidity={weather.humidity}
         error={weather.error}
+        main={weather.main}
         />
       ) : null}
       {console.log(weather.data)}
