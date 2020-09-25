@@ -15,47 +15,6 @@ const Weather = () => {
       alert('not supported');
     }
   };
-  useEffect(() => {
-    getLocation();
-  }, []);
-  async function getCoordinates(position) {
-    // console.log(position);
-    // props.yes()
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const api = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKEY}`
-    )
-      .then((res) => res.json())
-      .then((api) => {
-        setWeather({
-          data: api,
-          city: api.city,
-          country: api.sys.country,
-          description: api.weather[0].description,
-          image: api.weather[0].icon,
-          temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
-          wind: Math.round(api.wind.speed),
-          humidity: api.main.humidity,
-          error: '',
-        });
-      });
-    //  .then((data) => data);
-    // if (latitude && longitude) {
-    // } else {
-    //   setWeather({
-    //     data: '',
-    //   city: '',
-    //   country: '',
-    //   description: '',
-    //   image: '',
-    //   temperature: '',
-    //   wind: '',
-    //   humidity: '',
-    //   error: alert('Please turn on location'),
-    // });
-    // }
-  }
 useEffect(() => {
   getLocation()
 }, [])
