@@ -1,4 +1,3 @@
-
 .loading-logo {
     width: 500px;
     height: 300px;
@@ -20,4 +19,8 @@
      to {
         transform: rotate(360deg);
      }
+ }
+ .loading-text {
+     text-align: center;
+     padding: 10%;
  }
