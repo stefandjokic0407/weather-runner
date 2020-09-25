@@ -1,7 +1,7 @@
 .temp {
   display: flex;
   justify-content: center;
-  margin-top: -20px;
+  margin-top: 27px;
   font-size: xx-large; }
 
 .humidity {
@@ -17,15 +17,7 @@
 .App {
   text-align: center; }
   .App .App-header {
-    background-color: #282c34;
-    min-height: 15vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white; }
+    font-size: x-large; }
 
 .clothing-box {
-  height: 50vh;
   width: 100vh; }
