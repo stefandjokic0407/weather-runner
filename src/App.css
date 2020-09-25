@@ -1,0 +1,36 @@
+.temp {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+  font-size: xx-large; }
+
+.humidity {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px; }
+
+.description {
+  display: flex;
+  justify-content: center;
+  margin-top: -18px; }
+
+.App {
+  text-align: center; }
+  .App .App-header {
+    background-color: #282c34;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white; }
+
+/* .weatherlogo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+} */
+.clothing-box {
+  height: 50vh;
+  width: 100vh; }
