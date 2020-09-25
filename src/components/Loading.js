@@ -27,13 +27,12 @@ const Loading = (props) => {
         src="https://cdn.discordapp.com/attachments/756212437606203542/756284007917944882/runner-logo.jpg"
       />
       <div className='loading-text'>
-      <h1>Allow us to access your location?</h1>
+        <h1>Allow us to access your location?</h1>
 
-      <button onClick={getLocation}>Yes</button>
-      <button onClick={props.no}>Search my Location</button>
-
-      {/* /> */}
-    </div>
+        <button onClick={getLocation}>Yes</button>
+        <button onClick={props.no}>Search my Location</button>
+     </div>
+   </div>
   );
 };
 
