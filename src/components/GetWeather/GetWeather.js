@@ -1,5 +1,6 @@
 import React from 'react';
 import Clothing from '../Clothing/Clothing';
+import './GetWeather.scss';
 
 const GetWeather = ({
   description,
