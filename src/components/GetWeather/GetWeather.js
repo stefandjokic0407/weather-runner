@@ -21,13 +21,17 @@ const GetWeather = ({
         </p>
       )}
       <div className="weather">
+        <div className="city-box">
         {name && <p>{name}</p>}
-        <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt="" />
+        <img className="logo" src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt="" />
+        </div>
+        <div className="category-box">
         {temperature && <p className="temp">{temperature} ℉ </p>}
         {wind && <p>Wind: {wind} mph</p>}
         {humidity && <p className="humidity">Humidity: {humidity}%</p>}
         {description && <p className="description"> {description}</p>}
         {error && <p>{error}</p>}
+        </div>
       </div>
       <Clothing temp={temperature} />
     </div>
