@@ -1,4 +1,5 @@
 import { findAllByAltText } from '@testing-library/react';
+import './Weather.scss';
 import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
@@ -8,11 +9,52 @@ const Weather = () => {
   const [isShowing] = useState(true);
   const APIKEY = '2d90cd2ad195805d051c268178b0923d';
   const getLocation = () => {
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(getCoordinates)
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getCoordinates);
     } else {
-      alert('not supported')
+      alert('not supported');
     }
+  };
+  useEffect(() => {
+    getLocation();
+  }, []);
+  async function getCoordinates(position) {
+    // console.log(position);
+    // props.yes()
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const api = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKEY}`
+    )
+      .then((res) => res.json())
+      .then((api) => {
+        setWeather({
+          data: api,
+          city: api.city,
+          country: api.sys.country,
+          description: api.weather[0].description,
+          image: api.weather[0].icon,
+          temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
+          wind: Math.round(api.wind.speed),
+          humidity: api.main.humidity,
+          error: '',
+        });
+      });
+    //  .then((data) => data);
+    // if (latitude && longitude) {
+    // } else {
+    //   setWeather({
+    //     data: '',
+    //   city: '',
+    //   country: '',
+    //   description: '',
+    //   image: '',
+    //   temperature: '',
+    //   wind: '',
+    //   humidity: '',
+    //   error: alert('Please turn on location'),
+    // });
+    // }
   }
 useEffect(() => {
   getLocation()
@@ -28,6 +70,7 @@ async function getCoordinates(position) {
 
    setWeather({
      data: api,
+     name: api.name,
      city: api.city,
      country: api.sys.country,
      description: api.weather[0].description,
@@ -71,19 +114,22 @@ async function getCoordinates(position) {
     if (city && country) {
       setWeather({
         data: apiData,
+        name: apiData.name,
         city: apiData.city,
         country: apiData.sys.country,
         description: apiData.weather[0].description,
         main: apiData.weather[0].main,
         image: apiData.weather[0].icon,
-        temperature: Math.round(apiData.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
+        temperature: Math.round(apiData.main.temp),
         wind: Math.round(apiData.wind.speed),
         humidity: apiData.main.humidity,
+
         error: '',
       });
     } else {
       setWeather({
         data: '',
+        name: '',
         city: '',
         country: '',
         description: '',
@@ -97,13 +143,13 @@ async function getCoordinates(position) {
     }
   }
 
-
   return (
     <div className="App">
       <h3>Please Enter City and Country</h3>
       <SearchBar getWeather={fetchData} />
-      {isShowing ? 
+      {isShowing ? (
         <GetWeather
+        name={weather.name}
         city={weather.city}
         country={weather.country}
         description={weather.description}
@@ -114,9 +160,7 @@ async function getCoordinates(position) {
         error={weather.error}
         main={weather.main}
         />
-      : 
-        null
-      }
+      ) : null}
       {console.log(weather.data)}
     </div>
   );
