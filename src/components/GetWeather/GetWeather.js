@@ -26,10 +26,10 @@ const GetWeather = ({
         <img className="logo" src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt="" />
         </div>
         <div className="category-box">
-        {temperature && <p className="temp">{temperature} ℉ </p>}
+        {temperature && <p className="temp">Temperature: {temperature} ℉ </p>}
         {wind && <p>Wind: {wind} mph</p>}
         {humidity && <p className="humidity">Humidity: {humidity}%</p>}
-        {description && <p className="description"> {description}</p>}
+        {description && <p className="description">Description: {description}</p>}
         {error && <p>{error}</p>}
         </div>
       </div>
