@@ -1,4 +1,5 @@
 import { findAllByAltText } from '@testing-library/react';
+import './Weather.scss';
 import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
@@ -8,12 +9,12 @@ const Weather = () => {
   const [isShowing] = useState(true);
   const APIKEY = '2d90cd2ad195805d051c268178b0923d';
   const getLocation = () => {
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(getCoordinates)
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getCoordinates);
     } else {
-      alert('not supported')
+      alert('not supported');
     }
-  }
+  };
 useEffect(() => {
   getLocation()
 }, [])
@@ -28,9 +29,11 @@ async function getCoordinates(position) {
 
    setWeather({
      data: api,
+     name: api.name,
      city: api.city,
      country: api.sys.country,
      description: api.weather[0].description,
+     main: api.weather[0].main,
      image: api.weather[0].icon,
      temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
      wind: Math.round(api.wind.speed),
@@ -70,22 +73,27 @@ if (latitude && longitude) {
     if (city && country) {
       setWeather({
         data: apiData,
+        name: apiData.name,
         city: apiData.city,
         country: apiData.sys.country,
         description: apiData.weather[0].description,
+        main: apiData.weather[0].main,
         image: apiData.weather[0].icon,
-        temperature: Math.round(apiData.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
+        temperature: Math.round(apiData.main.temp),
         wind: Math.round(apiData.wind.speed),
         humidity: apiData.main.humidity,
+
         error: '',
       });
     } else {
       setWeather({
         data: '',
+        name: '',
         city: '',
         country: '',
         description: '',
         image: '',
+        main: '',
         temperature: '',
         wind: '',
         humidity: '',
@@ -94,13 +102,13 @@ if (latitude && longitude) {
     }
   }
 
-
   return (
     <div className="App">
       <h3>Please Enter City and Country</h3>
       <SearchBar getWeather={fetchData} />
-      {isShowing ? 
+      {isShowing ? (
         <GetWeather
+        name={weather.name}
         city={weather.city}
         country={weather.country}
         description={weather.description}
@@ -109,10 +117,9 @@ if (latitude && longitude) {
         wind={weather.wind}
         humidity={weather.humidity}
         error={weather.error}
+        main={weather.main}
         />
-      : 
-        null
-      }
+      ) : null}
       {console.log(weather.data)}
     </div>
   );
