@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Loading from './components/Loading';
 import Weather from './components/Weather/Weather';
+import './App.scss'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -16,10 +17,10 @@ function App() {
     <div className="App">
       {loading ? (
         <Loading no={no} yes={yes} />
-      ) : (
-        <div>
+        ) : (
+          <div>
           <header className="App-header">
-            <h1>Weather Runner Placeholder</h1>
+          <h1>Weather Runner</h1>
           </header>
           <Weather />
         </div>
