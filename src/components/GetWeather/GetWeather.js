@@ -2,17 +2,8 @@ import React from 'react';
 import Clothing from '../Clothing/Clothing';
 import './GetWeather.scss';
 
-const GetWeather = ({
-  description,
-  name,
-  city,
-  country,
-  error,
-  temperature,
-  wind,
-  humidity,
-  image,
-}) => {
+const GetWeather = ({ description, city, country, error, temperature, wind, humidity, image, main, name}) => {
+
   return (
     <div>
       {city && country && (
@@ -22,8 +13,8 @@ const GetWeather = ({
       )}
       <div className="weather">
         <div className="city-box">
-        {name && <p>{name}</p>}
-        <img className="logo" src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt="" />
+      {name && <p>{name}</p>}
+      <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
         </div>
         <div className="category-box">
         {temperature && <p className="temp">Temperature: {temperature} ℉ </p>}
@@ -33,7 +24,10 @@ const GetWeather = ({
         {error && <p>{error}</p>}
         </div>
       </div>
-      <Clothing temp={temperature} />
+      <div className="clothing-box">
+      <h1>Clothing For Your Run</h1>
+      <Clothing temp={temperature} desc={description} main={main}/>
+      </div>
     </div>
   );
 };
