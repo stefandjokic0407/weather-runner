@@ -3,6 +3,7 @@ import Clothing from '../Clothing/Clothing';
 
 const GetWeather = ({
   description,
+  name,
   city,
   country,
   error,
@@ -19,6 +20,7 @@ const GetWeather = ({
         </p>
       )}
       <div className="weather">
+        {name && <p>{name}</p>}
         <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt="" />
         {temperature && <p className="temp">{temperature} ℉ </p>}
         {wind && <p>Wind: {wind} mph</p>}
