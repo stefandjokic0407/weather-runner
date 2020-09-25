@@ -1,0 +1,19 @@
+.input-boxes {
+  display: flex;
+  justify-content: center; }
+
+input {
+  border-radius: 15px;
+  text-align: center;
+  background: white; }
+
+input:focus {
+  background: pink;
+  border: 1px solid grey; }
+
+button {
+  border-radius: 15px;
+  background-color: #cecef0; }
+
+button:focus {
+  background: pink; }
