@@ -17,6 +17,10 @@
     align-items: center;
     align-content: space-around;
     border: 1px solid black;
-    box-shadow: 0 8px 6px -6px black; }
+    box-shadow: 0 9px 13px -6px black;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
   .clothes-boxes img {
     width: 40%; }
+  .clothes-boxes p {
+    margin-left: 15px;
+    margin-right: 10px; }
