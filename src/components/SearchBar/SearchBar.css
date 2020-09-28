@@ -5,7 +5,6 @@
 input {
   border-radius: 15px;
   text-align: center;
-<<<<<<< HEAD
   background: white;
   margin-right: 5px; }
 
@@ -19,17 +18,3 @@ button {
 
 button:focus {
   background: #50555e; }
-=======
-  background: white; }
-
-input:focus {
-  background: pink;
-  border: 1px solid grey; }
-
-button {
-  border-radius: 15px;
-  background-color: #cecef0; }
-
-button:focus {
-  background: pink; }
->>>>>>> master
