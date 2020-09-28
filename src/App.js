@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Loading from './components/Loading';
 import Weather from './components/Weather/Weather';
+import Footer from './components/Footer/Footer';
 import './App.scss';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <h1>Weather Runner</h1>
           </header>
           <Weather />
+          <Footer />
         </div>
       )}
     </div>
