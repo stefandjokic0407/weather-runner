@@ -1,6 +1,5 @@
-
 .loading-logo {
-    width: 500px;
+    width: 400px;
     height: 300px;
     display: block;
     position: fixed;
@@ -20,4 +19,37 @@
      to {
         transform: rotate(360deg);
      }
+ }
+ .loading-text {
+     text-align: center;
+     padding: 10%;
+     color: white;
+ }
+
+ @media(max-width: 500px) {
+     .loading-logo {
+         width: 200px;
+         height: 200px;
+     }
+     .loadingpage {
+        height: 50vh;
+     }
+ }
+ .loadingpage {
+     background-color: rgb(68, 107, 170);
+ }
+
+ .loadingbtn {
+     margin-right: 20px;
+    //  border-color: rgb(140, 148, 163);
+     border-color: black;
+     border-width: thick;
+    //  background-color: rgb(80, 85, 94);
+    background-color: black;
+     color: white;
+    //  border: solid rgb(80, 85, 94);
+    width: 150px;
+    outline: none;
+    
+     
  }
