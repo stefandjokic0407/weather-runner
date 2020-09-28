@@ -20,21 +20,24 @@ const Loading = (props) => {
   };
 
   return (
-    <div className='loadingpage'>
+    <div className="loadingpage">
       <img
         className="loading-logo"
         alt="weather-runner-logo"
         src="https://cdn.discordapp.com/attachments/756212437606203542/756284007917944882/runner-logo.jpg"
       />
-      <div className='loading-text'>
+      <div className="loading-text">
         <h1>Allow us to access your location?</h1>
 
-        <button className='loadingbtn' onClick={getLocation}>Access my Location</button>
-        <button className='loadingbtn' onClick={props.no}>Search my Location</button>
-     </div>
-   </div>
+        <button className="loadingbtn" onClick={getLocation}>
+          Access my Location
+        </button>
+        <button className="loadingbtn" onClick={props.no}>
+          Search my Location
+        </button>
+      </div>
+    </div>
   );
 };
 
 export default Loading;
-

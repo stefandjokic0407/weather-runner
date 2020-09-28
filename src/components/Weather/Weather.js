@@ -15,50 +15,49 @@ const Weather = () => {
       alert('not supported');
     }
   };
-useEffect(() => {
-  getLocation()
-}, [])
-async function getCoordinates(position) {
-  // console.log(position);
-  // props.yes()
-  const latitude = position.coords.latitude
-  const longitude = position.coords.longitude
- const api = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKEY}`)
- .then((res) => res.json())
- .then(api => {
-
-   setWeather({
-     data: api,
-     name: api.name,
-     city: api.city,
-     country: api.sys.country,
-     description: api.weather[0].description,
-     main: api.weather[0].main,
-     image: api.weather[0].icon,
-     temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
-     wind: Math.round(api.wind.speed),
-     humidity: api.main.humidity,
-     error: '',
-   });
-
- })
-//  .then((data) => data);
-if (latitude && longitude) {
-} else {
-  setWeather({
-    data: '',
-    city: '',
-    country: '',
-    description: '',
-    image: '',
-    temperature: '',
-    wind: '',
-    humidity: '',
-    error: alert('Please turn on location'),
-  });
-}
-}
-
+  useEffect(() => {
+    getLocation();
+  }, []);
+  async function getCoordinates(position) {
+    // console.log(position);
+    // props.yes()
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const api = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKEY}`
+    )
+      .then((res) => res.json())
+      .then((api) => {
+        setWeather({
+          data: api,
+          name: api.name,
+          city: api.city,
+          country: api.sys.country,
+          description: api.weather[0].description,
+          main: api.weather[0].main,
+          image: api.weather[0].icon,
+          temperature: Math.round(api.main.temp /* 9 */ /* / 5 - 459.67 */), // Returns temp in F from Kelvin
+          wind: Math.round(api.wind.speed),
+          humidity: api.main.humidity,
+          error: '',
+        });
+      });
+    //  .then((data) => data);
+    if (latitude && longitude) {
+    } else {
+      setWeather({
+        data: '',
+        city: '',
+        country: '',
+        description: '',
+        image: '',
+        temperature: '',
+        wind: '',
+        humidity: '',
+        error: alert('Please turn on location'),
+      });
+    }
+  }
 
   async function fetchData(e) {
     const city = e.target.elements.city.value;
@@ -108,16 +107,16 @@ if (latitude && longitude) {
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
         <GetWeather
-        name={weather.name}
-        city={weather.city}
-        country={weather.country}
-        description={weather.description}
-        image={weather.image}
-        temperature={weather.temperature}
-        wind={weather.wind}
-        humidity={weather.humidity}
-        error={weather.error}
-        main={weather.main}
+          name={weather.name}
+          city={weather.city}
+          country={weather.country}
+          description={weather.description}
+          image={weather.image}
+          temperature={weather.temperature}
+          wind={weather.wind}
+          humidity={weather.humidity}
+          error={weather.error}
+          main={weather.main}
         />
       ) : null}
       {console.log(weather.data)}
