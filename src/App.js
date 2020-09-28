@@ -21,7 +21,7 @@ function App() {
         ) : (
           <div>
           <header className="App-header">
-          <h1>Weather Runner</h1>
+          <h1 className="main-title">Weather Runner</h1>
           </header>
           <Weather />
           <Footer />
