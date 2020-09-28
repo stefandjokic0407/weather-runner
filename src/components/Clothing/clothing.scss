@@ -6,6 +6,10 @@ $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospac
     margin-bottom: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    h1 {
+        text-decoration: underline;
+    }
 }
   
 .clothes-boxes {
@@ -14,6 +18,7 @@ $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospac
     justify-content: space-evenly;
     
     span {
+        background-color: white;
         width: 30%;
         padding-top: 30px;
         padding-bottom: 20px;
@@ -26,7 +31,7 @@ $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospac
     };  
 
     img {
-        width: 40%;
+        width: 45%;
     }
 
     p {
