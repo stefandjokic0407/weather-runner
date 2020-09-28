@@ -21,11 +21,26 @@ $headerColor: #282c34;
 
 .App {
   text-align: center;
+<<<<<<< HEAD
   .App-header {
+=======
+  background-image: linear-gradient(rgb(68, 107, 170), white);
+  .App-header{
+>>>>>>> master
     font-size: x-large;
   }
 }
 
 .clothing-box {
+<<<<<<< HEAD
   width: 100vh;
 }
+=======
+  width: 100%;
+}
+
+.main-title {
+ margin: 0;
+ background-color: rgb(68, 107, 170);
+}
+>>>>>>> master

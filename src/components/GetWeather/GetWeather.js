@@ -16,21 +16,22 @@ const GetWeather = ({
 }) => {
   return (
     <div>
-      {city && country && (
-        <p>
-          {city}, {country}
-        </p>
-      )}
-      <div className="weather">
+      <div className="weather-box">
         <div className="city-box">
-          {name && <p>{name}</p>}
+          {name && (
+            <p>
+              {name}, {country}
+            </p>
+          )}
           <img
             src={`http://openweathermap.org/img/wn/${image}@2x.png`}
             alt=""
           />
         </div>
         <div className="category-box">
-          {temperature && <p className="temp">Temperature: {temperature} ℉ </p>}
+          {temperature && (
+            <h1 className="temp">Temperature: {temperature} ℉ </h1>
+          )}
           {wind && <p>Wind: {wind} mph</p>}
           {humidity && <p className="humidity">Humidity: {humidity}%</p>}
           {description && (
@@ -41,7 +42,7 @@ const GetWeather = ({
       </div>
       <div className="clothing-box">
         <h1>Clothing For Your Run</h1>
-        <Clothing temp={temperature} desc={description} main={main} />
+        <Clothing temp={temperature} main={main} image={image} />
       </div>
     </div>
   );
