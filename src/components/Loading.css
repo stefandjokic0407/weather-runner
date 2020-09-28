@@ -1,5 +1,5 @@
 .loading-logo {
-  width: 500px;
+  width: 400px;
   height: 300px;
   display: block;
   position: fixed;
@@ -15,3 +15,27 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+.loading-text {
+  text-align: center;
+  padding: 10%;
+  color: white; }
+
+@media (max-width: 500px) {
+  .loading-logo {
+    width: 200px;
+    height: 200px; }
+  .loadingpage {
+    height: 50vh; } }
+
+.loadingpage {
+  background-color: #446baa; }
+
+.loadingbtn {
+  margin-right: 20px;
+  border-color: black;
+  border-width: thick;
+  background-color: black;
+  color: white;
+  width: 150px;
+  outline: none; }
