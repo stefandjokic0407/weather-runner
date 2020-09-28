@@ -6,27 +6,22 @@ const GetWeather = ({ description, city, country, error, temperature, wind, humi
 
   return (
     <div>
-      {city && country && (
-        <p>
-          {city}, {country}
-        </p>
-      )}
-      <div className="weather">
+      <div className="weather-box">
         <div className="city-box">
-      {name && <p>{name}</p>}
-      <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
+          {name && <p>{name}, {country}</p>}
+          <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
         </div>
         <div className="category-box">
-        {temperature && <p className="temp">Temperature: {temperature} ℉ </p>}
-        {wind && <p>Wind: {wind} mph</p>}
-        {humidity && <p className="humidity">Humidity: {humidity}%</p>}
-        {description && <p className="description">Description: {description}</p>}
-        {error && <p>{error}</p>}
+          {temperature && <h1 className="temp">Temperature: {temperature} ℉ </h1>}
+          {wind && <p>Wind: {wind} mph</p>}
+          {humidity && <p className="humidity">Humidity: {humidity}%</p>}
+          {description && <p className="description">Description: {description}</p>}
+          {error && <p>{error}</p>}
         </div>
       </div>
       <div className="clothing-box">
-      <h1>Clothing For Your Run</h1>
-      <Clothing temp={temperature} main={main} image={image}/>
+        <h1>Clothing For Your Run</h1>
+        <Clothing temp={temperature} main={main} image={image}/>
       </div>
     </div>
   );
