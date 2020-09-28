@@ -3,9 +3,11 @@ import './Weather.scss';
 import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
+import GetHourly from '../GetHourly';
 
 const Weather = () => {
   const [weather, setWeather] = useState([]);
+  const [hourly, setHourly] = useState([]);
   const [isShowing] = useState(true);
   const APIKEY = '2d90cd2ad195805d051c268178b0923d';
   const getLocation = () => {
@@ -15,6 +17,7 @@ const Weather = () => {
       alert('not supported');
     }
   };
+
 useEffect(() => {
   getLocation()
 }, [])
@@ -57,8 +60,23 @@ if (latitude && longitude) {
     error: alert('Please turn on location'),
   });
 }
+const hourlyApi = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,daily&units=imperial&appid=${APIKEY}`)
+.then((res) => res.json())
+.then(hourlyApi => {
+  setHourly(
+    hourlyApi.hourly)
+})
 }
-
+const mappedHourly = hourly.map(hour => {
+  return <GetHourly
+  dt={hour.dt * 1000}
+  temp={hour.temp}
+  weathermain={hour.weather[0].main}
+  weatherdescription={hour.weather[0].description}
+  weathericon={hour.weather[0].icon}
+  />
+})
+const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
 
   async function fetchData(e) {
     const city = e.target.elements.city.value;
@@ -107,6 +125,8 @@ if (latitude && longitude) {
       <h3>Please Enter City and Country</h3>
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
+        <div>
+
         <GetWeather
         name={weather.name}
         city={weather.city}
@@ -119,8 +139,12 @@ if (latitude && longitude) {
         error={weather.error}
         main={weather.main}
         />
-      ) : null}
-      {console.log(weather.data)}
+        {/* {mappedHourly} */}
+        {splicedHourly}
+        </div>
+        ) : null}
+      {/* {console.log('weather', weather.data)} */}
+      {console.log('HOURLY', mappedHourly)}
     </div>
   );
 };
