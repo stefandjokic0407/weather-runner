@@ -29,9 +29,6 @@ const Loading = (props) => {
         src={Logo}
       />
       <div className='loading-text'>
-        <h1>Allow us to access your location?</h1>
-
-        
      </div>
    </div>
   );

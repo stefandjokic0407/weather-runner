@@ -50,7 +50,8 @@
     height: 100px;
     outline: none; }
   h1 {
-    display: none; }
+    display: none;
+    font-family: 'Courier New', Courier, monospace; }
   /* .loadingpage {
         height: 50vh;
      } */ }
