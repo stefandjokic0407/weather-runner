@@ -23,15 +23,12 @@ const Loading = (props) => {
   return (
     <div className='loadingpage'>
       <img
+        onClick={getLocation}
         className="loading-logo"
         alt="weather-runner-logo"
         src={Logo}
       />
       <div className='loading-text'>
-        <h1>Allow us to access your location?</h1>
-
-        <button className='loadingbtn' onClick={getLocation}>Access my Location</button>
-        <button className='loadingbtn' onClick={props.no}>Search my Location</button>
      </div>
    </div>
   );
