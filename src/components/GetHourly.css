@@ -1,15 +1,23 @@
 .hourly {
   display: inline-block;
+  justify-content: space-evenly;
   font-size: 10px;
   padding: 3%;
-  background-color: whitesmoke;
-  border: 1px solid black; }
+  background-color: lightblue;
+  border: 1px solid black;
+  font-weight: bolder; }
   .hourly img {
     width: 40px; }
 
 .hourlybtn {
-  width: 100px; }
+  width: 100px;
+  outline: none;
+  margin: 1%; }
 
 .hourlybtncontainer {
   display: flex;
   justify-content: space-between; }
+
+@media (max-width: 500px) {
+  .hourlybtn {
+    width: 70px; } }

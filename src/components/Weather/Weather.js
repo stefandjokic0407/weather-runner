@@ -129,17 +129,6 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
     searchHourlyApi.hourly)
 })
   }
-// const mappedHourly = hourly.map(hour => {
-//   return <GetHourly
-//   dt={hour.dt * 1000}
-//   temp={hour.temp}
-//   weathermain={hour.weather[0].main}
-//   weatherdescription={hour.weather[0].description}
-//   weathericon={hour.weather[0].icon}
-  // />
-// })
-  // const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
-
 
   const next = () => {
     if(index < 4) {
@@ -175,6 +164,15 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
         <div>
+        <div className='hourlycontainer'>
+        {fsdgs()}
+        </div>
+
+        <div className='hourlybtncontainer'>
+
+        <button className='hourlybtn' onClick={previous}>previous</button>
+        <button className='hourlybtn' onClick={next}>Next</button>
+        </div>
 
         <GetWeather
         name={weather.name}
@@ -188,20 +186,9 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
         error={weather.error}
         main={weather.main}
         />
-        {/* {mappedHourly} */}
-        {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
-        <div className='hourlycontainer'>
-        {fsdgs()}
-        </div>
-
-        <div className='hourlybtncontainer'>
-
-        <button className='hourlybtn' onClick={previous}>previous</button>
-        <button className='hourlybtn' onClick={next}>Next</button>
-        </div>
         </div>
         ) : null}
-      {console.log('weather', weather.data)}
+      {/* {console.log('weather', weather.data)} */}
       {/* {console.log('HOURLY', mappedHourly)} */}
     </div>
   );
