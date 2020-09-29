@@ -174,6 +174,15 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
       {isShowing ? (
         <div>
 
+        <div className='hourlycontainer'>
+        {fsdgs()}
+        </div>
+
+        <div className='hourlybtncontainer'>
+
+        <button className='hourlybtn' onClick={previous}>previous</button>
+        <button className='hourlybtn' onClick={next}>Next</button>
+        </div>
         <GetWeather
           name={weather.name}
           city={weather.city}
@@ -188,15 +197,6 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
         />
         {/* {mappedHourly} */}
         {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
-        <div className='hourlycontainer'>
-        {fsdgs()}
-        </div>
-
-        <div className='hourlybtncontainer'>
-
-        <button className='hourlybtn' onClick={previous}>previous</button>
-        <button className='hourlybtn' onClick={next}>Next</button>
-        </div>
         </div>
         ) : null}
       {console.log('weather', weather.data)}
