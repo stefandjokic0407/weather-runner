@@ -1,29 +1,14 @@
 .clothing-box {
   margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
   padding-top: 10px;
+  padding-bottom: 10px; }
+  .clothing-box h1 {
+    text-decoration: underline; }
 
-  padding-bottom: 10px;
-  width: 70%;
-  border: 3px solid black; }
-
-
-
-.clothing-box h1 {
-  text-align: center; }
-
-.clothing-box span {
-  display: flex; 
-
-  align-items: center;
-  align-content: space-around; }
-
-.clothing-box img {
-  padding: 15px 0px 15px 100px; }
-
-.clothing-box p {
-  padding-left: 150px;
-  padding-right: 50px; }
-
+.clothes-boxes {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly; }
   .clothes-boxes span {
@@ -36,8 +21,7 @@
     align-content: space-around;
     border: 1px solid black;
     box-shadow: 0 9px 13px -6px black;
-    border-radius: 10px;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
   .clothes-boxes img {
     width: 45%; }
   .clothes-boxes p {
