@@ -183,13 +183,13 @@ function Clothing(props) {
         </div> 
     } else if(temp > 90 && main === "Smoke") {
         return clothes = 
-        <div className="clothes-boxes">
+        <div className="smoke">
             <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
-            <h1>It's looking a little smoky out there!!!</h1>
+            <p>It's looking a little smoky out there!!!</p>
         </div> 
     } else if(temp > 90 && main === "Thunderstorm" ) {
         return clothes =
-        <div className="clothes-boxes">
+        <div className="thunderstorm">
             <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
         </div>
@@ -202,7 +202,7 @@ function Clothing(props) {
             </span>
             <span>
                 <img src="/icons/sunglasses.png" alt="Sunglasses" />
-                <p>Sunglasses are another great way to keep the sun from your eyes on a run.</p>
+                <p>Sunglasses are another great way to keep the sun from your eyes.</p>
             </span>
             <span>
                 <img src="/icons/shirt.png" alt="Shirt" />
@@ -371,13 +371,13 @@ function Clothing(props) {
         </div> 
     } else if(temp <= 89 && temp >= 60 && main === "Smoke") {
         return clothes = 
-        <div className="clothes-boxes">
+        <div className="smoke">
             <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
-            <h1>It's looking a little smoky out there!!!</h1>
+            <p>It's looking a little smoky out there!!!</p>
         </div> 
     } else if(temp <= 89 && temp >= 60 && main === "Thunderstorm" ) {
         return clothes =
-        <div className="clothes-boxes">
+        <div className="thunderstorm" >
             <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
         </div>
@@ -567,13 +567,13 @@ function Clothing(props) {
         </div> 
     } else if(temp <=59 && temp >= 0 && main === "Smoke") {
         return clothes = 
-        <div className="clothes-boxes">
+        <div className="smoke">
             <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
-            <h1>It's looking a little smoky out there!!!</h1>
+            <p>It's looking a little smoky out there!!!</p>
         </div> 
     } else if(temp <=59 && temp >= 0 && main === "Thunderstorm" ) {
         return clothes =
-        <div className="clothes-boxes">
+        <div className="thunderstorm">
             <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
         </div>
