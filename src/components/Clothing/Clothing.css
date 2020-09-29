@@ -22,13 +22,35 @@
     border: 1px solid black;
     box-shadow: 0 9px 13px -6px black;
     border-radius: 10px;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-    transition: transform .2s; }
-  .clothes-boxes span:hover {
-    background-image: linear-gradient(to top, pink, white);
-    transform: scale(1.15); }
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
   .clothes-boxes img {
     width: 45%; }
   .clothes-boxes p {
     margin-left: 15px;
     margin-right: 10px; }
+
+.thunderstorm {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  box-shadow: 0 9px 13px -6px black; }
+  .thunderstorm img {
+    width: 40%; }
+
+.smoke {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  box-shadow: 0 9px 13px -6px black; }
+  .smoke img {
+    width: 30%; }
