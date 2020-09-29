@@ -1,16 +1,17 @@
 import React from 'react';
-import './Clothing.scss';
+import './clothing.scss';
 
 function Clothing(props) {
     const temp = props.temp;
     const main = props.main;
+    const image = props.image;
     console.log(props)
     let clothes;
     if(temp === undefined){
         clothes = null;
     } else if(temp > 90 && main === "Clear") {
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/hat.png" alt="Hat" />
                 <p>A good hat will keep the sun and sweat from your eyes.</p>
@@ -38,7 +39,7 @@ function Clothing(props) {
         </div>
     } else if(temp > 90 && main === "Clouds") {
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/hat.png" alt="Hat" />
                 <p>A good hat will keep the sun and sweat from your eyes.</p>
@@ -86,7 +87,7 @@ function Clothing(props) {
         </div>
     } else if(temp > 90 && main === "Drizzle") {
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/hat.png" alt="Hat" />
                 <p>A good hat will keep the sweat & rain from your eyes.</p>
@@ -108,15 +109,15 @@ function Clothing(props) {
                 <p>Even if it is raining, STAY HYDRATED!</p>
             </span>
         </div>
-    } else if(temp <= 89 && temp >= 60 && main === "Thunderstorm" ) {
+    } else if(temp > 90 && main === "Thunderstorm" ) {
         return clothes =
-        <div>
-            <img src="/icons/storm.png" alt="Storming"/>
+        <div className="clothes-boxes">
+            <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
         </div>
     } else if(temp <= 89 && temp >= 60 && main === "Clear"){
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/hat.png" alt="Hat" />
                 <p>A good hat will keep the sun and sweat from your eyes.</p>
@@ -144,7 +145,7 @@ function Clothing(props) {
         </div>
     } else if(temp <= 89 && temp >= 60 && main === "Rain") {
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/hat.png" alt="Hat" />
                 <p>A good hat will keep the sweat & rain from your eyes.</p>
@@ -168,7 +169,7 @@ function Clothing(props) {
         </div>
     } else if(temp <= 89 && temp >= 60 && main === "Clouds") {
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/hat.png" alt="Hat" />
                 <p>A good hat will keep the sweat from your eyes.</p>
@@ -193,12 +194,12 @@ function Clothing(props) {
     } else if(temp <= 89 && temp >= 60 && main === "Thunderstorm" ) {
         return clothes =
         <div>
-            <img src="/icons/storm.png" alt="Storming"/>
+            <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
         </div>
     } else if(temp <=59 && temp >= 0 && main === "Clear") {
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/beanie.png" alt="Beanie" />
                 <p>Wear a beanie or something to keep your head warm.</p>
@@ -226,7 +227,7 @@ function Clothing(props) {
         </div>
     } else if(temp <=59 && temp >= 0 && main === "Clouds") {
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/beanie.png" alt="Beanie" />
                 <p>Wear a beanie or something to keep your head warm.</p>
@@ -250,7 +251,7 @@ function Clothing(props) {
         </div>
     } else if(temp <=59 && temp >= 0 && main === "Rain") {
         return clothes = 
-        <div>
+        <div className="clothes-boxes">
             <span>
                 <img src="/icons/beanie.png" alt="Beanie" />
                 <p>Wear a beanie or something to keep your head warm.</p>
@@ -278,8 +279,7 @@ function Clothing(props) {
         </div>
     };
 
-    return <div className="clothing-box">
-        <h1> Clothing For Your Run </h1>
+    return <div>
         {clothes}
     </div>
 }

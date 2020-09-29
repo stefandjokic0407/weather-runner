@@ -9,6 +9,7 @@ const Weather = () => {
   const [weather, setWeather] = useState([]);
   const [hourly, setHourly] = useState([]);
   const [isShowing] = useState(true);
+  const [index, setIndex] = useState(1)
   const APIKEY = '2d90cd2ad195805d051c268178b0923d';
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -18,6 +19,7 @@ const Weather = () => {
     }
   };
 
+  
 useEffect(() => {
   getLocation()
 }, [])
@@ -120,6 +122,30 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
     }
   }
 
+  const next = () => {
+    if(index < 4) {
+    setIndex(index + 1)
+    }
+  }
+    
+  const previous = () => {
+   if(index > 1){ 
+     setIndex(index - 1)
+    } }
+
+    const fsdgs = () => {
+      if(index <= 1) {
+        return splicedHourly[0] && splicedHourly[1] && splicedHourly[2] && splicedHourly[3] && splicedHourly[4] && splicedHourly[5]
+      } else if(index <= 2) {
+        return splicedHourly[6], splicedHourly[7], splicedHourly[8], splicedHourly[9], splicedHourly[10], splicedHourly[11]
+      } else if(index <= 3) {
+        return splicedHourly[12], splicedHourly[13], splicedHourly[14], splicedHourly[15], splicedHourly[16], splicedHourly[17]
+      } else {
+        return splicedHourly[18], splicedHourly[19], splicedHourly[20], splicedHourly[21], splicedHourly[22], splicedHourly[23]
+
+      }
+ }
+
   return (
     <div className="App">
       <h3>Please Enter City and Country</h3>
@@ -140,11 +166,14 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
         main={weather.main}
         />
         {/* {mappedHourly} */}
-        {splicedHourly}
+        {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
+        {fsdgs()}
+        <button onClick={next}>Next</button>
+        <button onClick={previous}>previous</button>
         </div>
         ) : null}
       {/* {console.log('weather', weather.data)} */}
-      {console.log('HOURLY', mappedHourly)}
+      {/* {console.log('HOURLY', mappedHourly)} */}
     </div>
   );
 };

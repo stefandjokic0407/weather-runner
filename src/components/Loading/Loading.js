@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Loading.scss';
+import Logo from './WR (1).png';
 
 const Loading = (props) => {
   const getLocation = () => {
@@ -22,15 +23,12 @@ const Loading = (props) => {
   return (
     <div className='loadingpage'>
       <img
+        onClick={getLocation}
         className="loading-logo"
         alt="weather-runner-logo"
-        src="https://cdn.discordapp.com/attachments/756212437606203542/756284007917944882/runner-logo.jpg"
+        src={Logo}
       />
       <div className='loading-text'>
-        <h1>Allow us to access your location?</h1>
-
-        <button className='loadingbtn' onClick={getLocation}>Access my Location</button>
-        <button className='loadingbtn' onClick={props.no}>Search my Location</button>
      </div>
    </div>
   );
