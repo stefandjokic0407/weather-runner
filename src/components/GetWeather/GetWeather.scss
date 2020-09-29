@@ -1,10 +1,16 @@
+$primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+
+
 .weather-box {
   width: 80%;
   margin: 0 auto;
   margin-top: 60px;
-  background: white;
-  border: 1px solid black; 
-  display: flex; 
+
+  background: linear-gradient(to bottom, #94c5f8 1%, #a6e6ff 70%, #b1b5ea 100%);
+  border: 1px solid black;
+  display: flex;
+
   justify-content: space-evenly;
   align-items: baseline;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -27,7 +33,6 @@
 .city-box img {
   height: 40%;
   width: 40%;
-  
 }
 
 .category-box {
@@ -43,35 +48,5 @@
   p {
     margin-top: 55px;
     font-size: 25px;
-  }
-}
-
-@media(max-width:1245px) {
-  .weather-box {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 20px;
-    background: white;
-    border: 1px solid black; 
-    display: flex; 
-    justify-content: space-evenly;
-    align-items: baseline;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-    box-shadow: 0 9px 13px -6px black;
-  } 
-  .city-box {
-    border: none;
-    font-size: 20px;
-  }
-  .category-box {
-    padding-left: 0px;
-  }
-  p {
-    margin: auto;
-    font-size: 25px;
-  }
-
-  h1 {
-    font-size: 40px;
   }
 }
