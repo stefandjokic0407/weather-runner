@@ -202,7 +202,7 @@ function Clothing(props) {
             </span>
             <span>
                 <img src="/icons/sunglasses.png" alt="Sunglasses" />
-                <p>Sunglasses are another great way to keep the sun from your eyes on a run.</p>
+                <p>Sunglasses are another great way to keep the sun from your eyes.</p>
             </span>
             <span>
                 <img src="/icons/shirt.png" alt="Shirt" />
