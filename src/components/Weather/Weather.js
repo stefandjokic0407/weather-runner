@@ -132,15 +132,19 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
      setIndex(index - 1)
     } }
 
+    const firstSplicedHourly = splicedHourly.splice(0, 6)
+    const secondSplicedHourly = splicedHourly.splice(0, 6)
+    const thirdSplicedHourly = splicedHourly.splice(0, 6)
+    const FourthSplicedHourly = splicedHourly.splice(0, 6)
     const fsdgs = () => {
       if(index <= 1) {
-        return splicedHourly[0] && splicedHourly[1] && splicedHourly[2] && splicedHourly[3] && splicedHourly[4] && splicedHourly[5]
+        return firstSplicedHourly
       } else if(index <= 2) {
-        return splicedHourly[6], splicedHourly[7], splicedHourly[8], splicedHourly[9], splicedHourly[10], splicedHourly[11]
+        return secondSplicedHourly
       } else if(index <= 3) {
-        return splicedHourly[12], splicedHourly[13], splicedHourly[14], splicedHourly[15], splicedHourly[16], splicedHourly[17]
+        return thirdSplicedHourly
       } else {
-        return splicedHourly[18], splicedHourly[19], splicedHourly[20], splicedHourly[21], splicedHourly[22], splicedHourly[23]
+        return FourthSplicedHourly
 
       }
  }
