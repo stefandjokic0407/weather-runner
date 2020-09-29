@@ -21,9 +21,14 @@ $headerColor: #282c34;
 
 .App {
   text-align: center;
-  background-image: linear-gradient(rgb(68, 107, 170), white);
-  .App-header{
-    font-size: x-large;
+
+  // background-image: linear-gradient(rgb(68, 107, 170), white);
+  .App-header {
+    font-size: xx-large;
+    .toggle {
+      display: flex;
+      margin-bottom: -140px;
+    }
   }
 }
 
@@ -31,7 +36,7 @@ $headerColor: #282c34;
   width: 100%;
 }
 
-.main-title {
- margin: 0;
- background-color: rgb(68, 107, 170);
-}
+// .main-title {
+//   margin: 0;
+//   background-color: rgb(68, 107, 170);
+// }

@@ -15,14 +15,12 @@
   margin-top: -18px; }
 
 .App {
-  text-align: center;
-  background-image: linear-gradient(#446baa, white); }
+  text-align: center; }
   .App .App-header {
-    font-size: x-large; }
+    font-size: xx-large; }
+    .App .App-header .toggle {
+      display: flex;
+      margin-bottom: -150px; }
 
 .clothing-box {
   width: 100%; }
-
-.main-title {
-  margin: 0;
-  background-color: #446baa; }

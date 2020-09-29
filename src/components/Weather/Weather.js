@@ -1,5 +1,4 @@
 import { findAllByAltText } from '@testing-library/react';
-import './Weather.scss';
 import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
@@ -19,7 +18,6 @@ const Weather = () => {
     }
   };
 
-  
 useEffect(() => {
   getLocation()
 }, [])
@@ -79,6 +77,7 @@ const mappedHourly = hourly.map(hour => {
   />
 })
 const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
+
 
   async function fetchData(e) {
     const city = e.target.elements.city.value;
