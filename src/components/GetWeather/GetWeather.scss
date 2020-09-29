@@ -1,10 +1,16 @@
+$primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+
+
 .weather-box {
   width: 80%;
   margin: 0 auto;
   margin-top: 60px;
-  background: white;
-  border: 1px solid black; 
-  display: flex; 
+
+  background: rgba(255, 255, 255, 0.747);
+  border: 1px solid black;
+  display: flex;
+
   justify-content: space-evenly;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   box-shadow: 0 9px 13px -6px black;
@@ -21,7 +27,6 @@
 .city-box img {
   height: 40%;
   width: 40%;
-  
 }
 
 .category-box {
@@ -58,3 +63,4 @@
       font-size: 20px;
     }
 }
+

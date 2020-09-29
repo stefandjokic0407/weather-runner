@@ -1,5 +1,4 @@
 import { findAllByAltText } from '@testing-library/react';
-import './Weather.scss';
 import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
@@ -19,7 +18,6 @@ const Weather = () => {
     }
   };
 
-  
 useEffect(() => {
   getLocation()
 }, [])
@@ -79,6 +77,7 @@ const mappedHourly = hourly.map(hour => {
   />
 })
 const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
+
 
   async function fetchData(e) {
     const city = e.target.elements.city.value;
@@ -171,7 +170,6 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
 
   return (
     <div className="App">
-      <h3>Please Enter City and Country</h3>
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
         <div>
@@ -185,20 +183,6 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
         <button className='hourlybtn' onClick={next}>Next</button>
         </div>
 
-        <GetWeather
-        name={weather.name}
-        city={weather.city}
-        country={weather.country}
-        description={weather.description}
-        image={weather.image}
-        temperature={weather.temperature}
-        wind={weather.wind}
-        humidity={weather.humidity}
-        error={weather.error}
-        main={weather.main}
-        />
-        {/* {mappedHourly} */}
-        {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
         <div className='hourlycontainer'>
         {fsdgs()}
         </div>
@@ -208,6 +192,20 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
         <button className='hourlybtn' onClick={previous}>previous</button>
         <button className='hourlybtn' onClick={next}>Next</button>
         </div>
+        <GetWeather
+          name={weather.name}
+          city={weather.city}
+          country={weather.country}
+          description={weather.description}
+          image={weather.image}
+          temperature={weather.temperature}
+          wind={weather.wind}
+          humidity={weather.humidity}
+          error={weather.error}
+          main={weather.main}
+        />
+        {/* {mappedHourly} */}
+        {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
         </div>
         ) : null}
       {console.log('weather', weather.data)}
