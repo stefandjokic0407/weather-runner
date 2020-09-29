@@ -21,18 +21,16 @@ const Loading = (props) => {
   };
 
   return (
-    <div className='loadingpage'>
+    <div className="loadingpage">
       <img
         onClick={getLocation}
         className="loading-logo"
         alt="weather-runner-logo"
         src={Logo}
       />
-      <div className='loading-text'>
-     </div>
-   </div>
+      <div className="loading-text"></div>
+    </div>
   );
 };
 
 export default Loading;
-
