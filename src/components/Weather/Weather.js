@@ -1,5 +1,4 @@
 import { findAllByAltText } from '@testing-library/react';
-import './Weather.scss';
 import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
@@ -103,7 +102,6 @@ const Weather = () => {
 
   return (
     <div className="App">
-      <h3>Please Enter City and Country</h3>
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
         <GetWeather
