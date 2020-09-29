@@ -7,9 +7,9 @@
   .hourly img {
     width: 40px; }
 
-.hourlybtn {
-  width: 100px; }
-
 .hourlybtncontainer {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-evenly; }
+
+.hourlybtn {
+  width: 100px; }

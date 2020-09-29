@@ -8,13 +8,14 @@
         width: 40px;
     }
 }
+.hourlybtncontainer {
+    display: flex;
+    justify-content: space-evenly;
+        
+}
+
 .hourlybtn {
    
     width: 100px;
-
-}
-.hourlybtncontainer {
-    display: flex;
-    justify-content: space-between;
 
 }
