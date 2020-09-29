@@ -1,5 +1,4 @@
 import { findAllByAltText } from '@testing-library/react';
-import './Weather.scss';
 import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
@@ -19,7 +18,6 @@ const Weather = () => {
     }
   };
 
-  
 useEffect(() => {
   getLocation()
 }, [])
@@ -80,6 +78,7 @@ const mappedHourly = hourly.map(hour => {
 })
 const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
 
+
   async function fetchData(e) {
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
@@ -120,7 +119,26 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
         error: alert('Please Type A City And Country'),
       });
     }
+    const latitude = apiData.coord.lat
+    const longitude = apiData.coord.lon
+    const searchHourlyApi = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,daily&units=imperial&appid=${APIKEY}`)
+.then((res) => res.json())
+.then(searchHourlyApi => {
+  setHourly(
+    searchHourlyApi.hourly)
+})
   }
+// const mappedHourly = hourly.map(hour => {
+//   return <GetHourly
+//   dt={hour.dt * 1000}
+//   temp={hour.temp}
+//   weathermain={hour.weather[0].main}
+//   weatherdescription={hour.weather[0].description}
+//   weathericon={hour.weather[0].icon}
+  // />
+// })
+  // const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
+
 
   const next = () => {
     if(index < 4) {
@@ -132,47 +150,56 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
    if(index > 1){ 
      setIndex(index - 1)
     } }
-
+   
+    const firstSplicedHourly = splicedHourly.splice(0, 6)
+    const secondSplicedHourly = splicedHourly.splice(0, 6)
+    const thirdSplicedHourly = splicedHourly.splice(0, 6)
+    const FourthSplicedHourly = splicedHourly.splice(0, 6)
     const fsdgs = () => {
       if(index <= 1) {
-        return splicedHourly[0] && splicedHourly[1] && splicedHourly[2] && splicedHourly[3] && splicedHourly[4] && splicedHourly[5]
+        return firstSplicedHourly
       } else if(index <= 2) {
-        return splicedHourly[6], splicedHourly[7], splicedHourly[8], splicedHourly[9], splicedHourly[10], splicedHourly[11]
+        return secondSplicedHourly
       } else if(index <= 3) {
-        return splicedHourly[12], splicedHourly[13], splicedHourly[14], splicedHourly[15], splicedHourly[16], splicedHourly[17]
+        return thirdSplicedHourly
       } else {
-        return splicedHourly[18], splicedHourly[19], splicedHourly[20], splicedHourly[21], splicedHourly[22], splicedHourly[23]
+        return FourthSplicedHourly
 
       }
  }
 
   return (
     <div className="App">
-      <h3>Please Enter City and Country</h3>
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
         <div>
 
         <GetWeather
-        name={weather.name}
-        city={weather.city}
-        country={weather.country}
-        description={weather.description}
-        image={weather.image}
-        temperature={weather.temperature}
-        wind={weather.wind}
-        humidity={weather.humidity}
-        error={weather.error}
-        main={weather.main}
+          name={weather.name}
+          city={weather.city}
+          country={weather.country}
+          description={weather.description}
+          image={weather.image}
+          temperature={weather.temperature}
+          wind={weather.wind}
+          humidity={weather.humidity}
+          error={weather.error}
+          main={weather.main}
         />
         {/* {mappedHourly} */}
         {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
+        <div className='hourlycontainer'>
         {fsdgs()}
-        <button onClick={next}>Next</button>
-        <button onClick={previous}>previous</button>
+        </div>
+
+        <div className='hourlybtncontainer'>
+
+        <button className='hourlybtn' onClick={previous}>previous</button>
+        <button className='hourlybtn' onClick={next}>Next</button>
+        </div>
         </div>
         ) : null}
-      {/* {console.log('weather', weather.data)} */}
+      {console.log('weather', weather.data)}
       {/* {console.log('HOURLY', mappedHourly)} */}
     </div>
   );

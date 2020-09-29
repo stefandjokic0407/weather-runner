@@ -2,7 +2,7 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 60px;
-  background: white;
+  background: linear-gradient(to bottom, #94c5f8 1%, #a6e6ff 70%, #b1b5ea 100%);
   border: 1px solid black;
   display: flex;
   justify-content: space-evenly;
