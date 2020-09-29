@@ -17,7 +17,10 @@
 .App {
   text-align: center; }
   .App .App-header {
-    font-size: x-large; }
+    font-size: xx-large; }
+    .App .App-header .toggle {
+      display: flex;
+      margin-bottom: -140px; }
 
 .clothing-box {
   width: 100%; }
