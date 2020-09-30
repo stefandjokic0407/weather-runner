@@ -16,6 +16,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   
+<<<<<<< HEAD
   span {
       background-color:rgba(255, 255, 255, 0.747);
       width: 30%;
@@ -89,3 +90,34 @@
       width: 30%; 
   }
 }
+=======
+  .clothes-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    span {
+        background-color:rgba(255, 255, 255, 0.479);
+        width: 30%;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        align-items: center;
+        align-content: space-around; 
+        border: 1px solid black;
+        box-shadow: 0 9px 13px -6px black;
+        border-radius: 10px;
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+        font-weight: bolder;
+    };  
+  
+    img {
+        width: 45%;
+    }
+  
+    p {
+        margin-left: 15px;
+        margin-right: 10px;
+    }
+  }
+>>>>>>> 6723ab2b917c148d563c126ad26022435e3396ea
