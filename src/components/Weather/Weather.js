@@ -179,6 +179,7 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
         <div>
+<<<<<<< HEAD
         <div className='hourlycontainer'>
 >>>>>>> 1475d9eaba24c72d952eb942614363ac6557d369
         {fsdgs()}
@@ -197,6 +198,40 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
     {/* {console.log('HOURLY', mappedHourly)} */}
   </div>
 );
+=======
+        <GetWeather
+          name={weather.name}
+          city={weather.city}
+          country={weather.country}
+          description={weather.description}
+          image={weather.image}
+          temperature={weather.temperature}
+          wind={weather.wind}
+          humidity={weather.humidity}
+          error={weather.error}
+          main={weather.main}
+        />
+
+        <div className='hourlycontainer'>
+        <button className='hourlybtn' onClick={previous}> &#8592; </button>
+        {fsdgs()}
+        <button className='hourlybtn' onClick={next}> &#8594; </button>
+        </div>
+
+        <div className="clothing-box">
+          <h1>Clothing For Your Run</h1>
+          <Clothing temp={weather.temperature} main={weather.main} image={weather.image}/> 
+        </div>  
+
+        {/* {mappedHourly} */}
+        {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
+        </div>
+        ) : null}
+      {console.log('weather', weather.data)}
+      {/* {console.log('HOURLY', mappedHourly)} */}
+    </div>
+  );
+>>>>>>> ae917c887fea6462b841e8f0abfaf788cdc96f1a
 };
 
 export default Weather;
