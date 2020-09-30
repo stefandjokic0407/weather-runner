@@ -29,6 +29,7 @@
         border-radius: 10px;
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
         font-weight: bolder;
+        font-size: 30px;
     };  
   
     img {
@@ -90,3 +91,22 @@
       width: 30%; 
     }
   };
+
+  @media (max-width: 500px) {
+    .clothing-box h1 {
+      font-size: 15px;
+    }
+
+    span {
+      padding: 2%;
+
+      img {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 2px;
+        font-size: 15px;
+      }
+    }
+  }

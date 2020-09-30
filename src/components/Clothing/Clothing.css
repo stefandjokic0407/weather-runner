@@ -24,7 +24,8 @@
     box-shadow: 0 9px 13px -6px black;
     border-radius: 10px;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-    font-weight: bolder; }
+    font-weight: bolder;
+    font-size: 30px; }
   .clothes-boxes img {
     width: 45%; }
   .clothes-boxes p {
@@ -70,3 +71,14 @@
   box-shadow: 0 9px 13px -6px black; }
   .tornado img {
     width: 30%; }
+
+@media (max-width: 500px) {
+  .clothing-box h1 {
+    font-size: 15px; }
+  span {
+    padding: 2%; }
+    span img {
+      margin-bottom: 10px; }
+    span p {
+      margin-bottom: 2px;
+      font-size: 15px; } }
