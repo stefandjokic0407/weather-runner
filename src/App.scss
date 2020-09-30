@@ -43,10 +43,10 @@ $headerColor: #282c34;
 }
 
 @media (max-width: 500px) {
-  .main-title {
+  .App-header h1  {
     display: inline-block;
     width: 100%;
-    font-size: 30px;
+    font-size: 45px;
   }
   
   .toggle-control {
