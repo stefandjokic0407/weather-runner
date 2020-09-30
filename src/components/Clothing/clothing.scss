@@ -5,6 +5,7 @@
   margin-bottom: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
+  border: black;
 
   h1 {
       font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -30,6 +31,10 @@
       font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
       font-weight: bolder;
   };  
+
+  span:hover {
+    transform: scale(1.1);
+  }
 
   img {
       width: 45%;
