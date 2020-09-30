@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
 import GetHourly from '../GetHourly';
+import Clothing from '../Clothing/Clothing';
 
 const Weather = () => {
   const [weather, setWeather] = useState([]);
@@ -173,15 +174,6 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
         <div>
-        <div className='hourlycontainer'>
-        {fsdgs()}
-        </div>
-
-        <div className='hourlybtncontainer'>
-
-        <button className='hourlybtn' onClick={previous}>previous</button>
-        <button className='hourlybtn' onClick={next}>Next</button>
-        </div>
         <GetWeather
           name={weather.name}
           city={weather.city}
@@ -194,6 +186,18 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
           error={weather.error}
           main={weather.main}
         />
+
+        <div className='hourlycontainer'>
+        <button className='hourlybtn' onClick={previous}> &#8592; </button>
+        {fsdgs()}
+        <button className='hourlybtn' onClick={next}> &#8594; </button>
+        </div>
+
+        <div className="clothing-box">
+          <h1>Clothing For Your Run</h1>
+          <Clothing temp={weather.temperature} main={weather.main} image={weather.image}/> 
+        </div>  
+
         {/* {mappedHourly} */}
         {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
         </div>
