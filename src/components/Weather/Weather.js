@@ -120,7 +120,26 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
         error: alert('Please Type A City And Country'),
       });
     }
+    const latitude = apiData.coord.lat
+    const longitude = apiData.coord.lon
+    const searchHourlyApi = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,daily&units=imperial&appid=${APIKEY}`)
+.then((res) => res.json())
+.then(searchHourlyApi => {
+  setHourly(
+    searchHourlyApi.hourly)
+})
   }
+// const mappedHourly = hourly.map(hour => {
+//   return <GetHourly
+//   dt={hour.dt * 1000}
+//   temp={hour.temp}
+//   weathermain={hour.weather[0].main}
+//   weatherdescription={hour.weather[0].description}
+//   weathericon={hour.weather[0].icon}
+  // />
+// })
+  // const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
+
 
   const next = () => {
     if(index < 4) {
@@ -132,7 +151,7 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
    if(index > 1){ 
      setIndex(index - 1)
     } }
-
+   
     const firstSplicedHourly = splicedHourly.splice(0, 6)
     const secondSplicedHourly = splicedHourly.splice(0, 6)
     const thirdSplicedHourly = splicedHourly.splice(0, 6)
@@ -150,55 +169,11 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
       }
  }
 
-<<<<<<< HEAD
-
- return (
-  <div className="App">
-    <SearchBar getWeather={fetchData} />
-    {isShowing ? (
-      <div>
-      
-      <GetWeather
-        name={weather.name}
-        city={weather.city}
-        country={weather.country}
-        description={weather.description}
-        image={weather.image}
-        temperature={weather.temperature}
-        wind={weather.wind}
-        humidity={weather.humidity}
-        error={weather.error}
-        main={weather.main}
-      />
-
-      <div className='hourlycontainer'>
-        <button className='hourlybtn' onClick={previous}> &#8592; </button>
-=======
   return (
     <div className="App">
       <SearchBar getWeather={fetchData} />
       {isShowing ? (
         <div>
-<<<<<<< HEAD
-        <div className='hourlycontainer'>
->>>>>>> 1475d9eaba24c72d952eb942614363ac6557d369
-        {fsdgs()}
-        <button className='hourlybtn' onClick={next}> &#8594; </button>
-      </div>
-
-      <div className="clothing-box">
-        <h1>Clothing For Your Run</h1>
-        <Clothing temp={weather.temperature} main={weather.main} image={weather.image}/>
-      </div>
-      {/* {mappedHourly} */}
-      {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
-      </div>
-      ) : null}
-    {console.log('weather', weather.data)}
-    {/* {console.log('HOURLY', mappedHourly)} */}
-  </div>
-);
-=======
         <GetWeather
           name={weather.name}
           city={weather.city}
@@ -231,7 +206,6 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
       {/* {console.log('HOURLY', mappedHourly)} */}
     </div>
   );
->>>>>>> ae917c887fea6462b841e8f0abfaf788cdc96f1a
 };
 
 export default Weather;
