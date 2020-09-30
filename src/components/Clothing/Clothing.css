@@ -72,13 +72,18 @@
   .tornado img {
     width: 30%; }
 
+@media (max-width: 768px) {
+  .clothes-boxes p {
+    font-size: 20px; } }
+
 @media (max-width: 500px) {
   .clothing-box h1 {
-    font-size: 15px; }
+    display: inherit;
+    margin-bottom: 25px;
+    font-size: 25px; }
+  .clothes-boxes p {
+    font-size: 13px; }
   span {
     padding: 2%; }
     span img {
-      margin-bottom: 10px; }
-    span p {
-      margin-bottom: 2px;
-      font-size: 15px; } }
+      margin-bottom: 10px; } }
