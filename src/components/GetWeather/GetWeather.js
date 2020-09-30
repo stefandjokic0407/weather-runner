@@ -1,5 +1,4 @@
 import React from 'react';
-import Clothing from '../Clothing/Clothing';
 import './GetWeather.scss';
 
 const GetWeather = ({ description, city, country, error, temperature, wind, humidity, image, main, name}) => {
@@ -18,10 +17,6 @@ const GetWeather = ({ description, city, country, error, temperature, wind, humi
           {description && <p className="description">Description: {description}</p>}
           {error && <p>{error}</p>}
         </div>
-      </div>
-      <div className="clothing-box">
-        <h1>Clothing For Your Run</h1>
-        <Clothing temp={temperature} main={main} image={image}/>
       </div>
     </div>
   );

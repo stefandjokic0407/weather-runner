@@ -13,19 +13,23 @@ body {
 }
 
 body.light-mode {
-  background-color: #efe2ba;
-  color: #1f2833;
+  background-color: #88bdbc;
+  color: black;
   transition: background-color 0.4s ease;
 }
 
 body.dark-mode {
-  background-color: #2F2FA2;
+  background-color: #2F4454;
   color: #d79922;
   transition: background-color 0.4s ease;
 
   // .dark-mode-toggle > button {
   //   color: #4056a1;
   // }
+}
+
+a.light-mode {
+  color: black;
 }
 
 .dark-mode-toggle {
@@ -45,7 +49,7 @@ body.dark-mode {
 input[type='checkbox'].dmcheck {
   width: 40px;
   height: 20px;
-  background: #4056a1;
+  background: black;
   position: relative;
   border-radius: 25px;
   appearance: none;
