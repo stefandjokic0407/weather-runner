@@ -17,6 +17,7 @@ body.light-mode {
 body.dark-mode {
   background-color: #2F4454;
   color: #d79922;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   transition: background-color 0.4s ease; }
 
 a.light-mode {
