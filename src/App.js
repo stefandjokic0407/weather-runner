@@ -28,8 +28,7 @@ function App() {
               <p>Toggle Dark Mode </p>
               <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
             </div>
-            <br></br>
-            <h1 className="main-title">Weather Runner</h1>
+          <h1 className="main-title">Weather Runner</h1>
           </header>
           <Weather />
           <Footer />

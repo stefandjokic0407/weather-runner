@@ -21,3 +21,13 @@
     .App .App-header .toggle {
       display: flex;
       margin-bottom: -140px; }
+
+@media (max-width: 500px) {
+  .toggle-control {
+    display: none; }
+  .App-header p {
+    display: none; }
+  .main-title {
+    display: initial;
+    margin-top: 200px;
+    font-size: 75px; } }
