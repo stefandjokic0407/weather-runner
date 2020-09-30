@@ -30,6 +30,11 @@
       font-weight: bolder;
   };  
 
+  span:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to top,  #282c34, white);
+  }
+
   img {
       width: 45%;
   }
