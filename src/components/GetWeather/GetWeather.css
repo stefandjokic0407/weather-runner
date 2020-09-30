@@ -1,8 +1,7 @@
 .weather-box {
   width: 80%;
   margin: 0 auto;
-  margin-top: 60px;
-  background: rgba(255, 255, 255, 0.747);
+  background-color: #2F4454;
   border: 1px solid black;
   display: flex;
   justify-content: space-evenly;

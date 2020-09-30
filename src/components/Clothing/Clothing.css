@@ -24,6 +24,9 @@
     border-radius: 10px;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     font-weight: bolder; }
+  .clothes-boxes span:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to top, #282c34, white); }
   .clothes-boxes img {
     width: 45%; }
   .clothes-boxes p {
