@@ -167,11 +167,9 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
         </div>
 
         <div className='hourlybtncontainer'>
-
-        <button className='hourlybtn' onClick={previous}>previous</button>
-        <button className='hourlybtn' onClick={next}>Next</button>
+        <button className='hourlybtn' onClick={previous}>p</button>
+        <button className='hourlybtn' onClick={next}>k</button>
         </div>
-
         <GetWeather
           name={weather.name}
           city={weather.city}

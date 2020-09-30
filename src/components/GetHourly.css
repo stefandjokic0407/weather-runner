@@ -3,9 +3,11 @@
   justify-content: space-evenly;
   font-size: 10px;
   padding: 3%;
-  background-color: lightblue;
+  background-color: linear-gradient(to #F64C72 1%, #553D67 70%, #99738E 100%);
   border: 1px solid black;
-  font-weight: bolder; }
+  font-weight: bolder;
+  padding: 20px;
+  margin-top: 10px; }
   .hourly img {
     width: 40px; }
 
