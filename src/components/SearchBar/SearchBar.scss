@@ -40,6 +40,15 @@ button:hover {
   cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+  input {
+    width: 20%;
+  }
+  
+  button {
+    width: 10%;
+  }
+}
 
 @media (max-width: 768px) {
   input {

@@ -4,6 +4,7 @@ import GetWeather from '../GetWeather/GetWeather';
 import SearchBar from '../SearchBar/SearchBar';
 import GetHourly from '../GetHourly';
 import Clothing from '../Clothing/Clothing';
+import Footer from '../Footer/Footer';
 
 const Weather = () => {
   const [weather, setWeather] = useState([]);
@@ -199,6 +200,8 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
           <h1>Clothing For Your Run</h1>
           <Clothing temp={weather.temperature} main={weather.main} image={weather.image}/> 
         </div> 
+
+        <Footer />
         {/* {mappedHourly} */}
         {/* {splicedHourly[0]}{splicedHourly[1]} {splicedHourly[2]}{splicedHourly[3]}{splicedHourly[4]}{splicedHourly[5]} */}
         </div>
