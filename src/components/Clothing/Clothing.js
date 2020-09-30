@@ -387,6 +387,12 @@ function Clothing(props) {
             <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
         </div>
+    } else if(temp <= 89 && temp >= 60 && main === "Tornado" ) {
+        return clothes =
+        <div className="tornado">
+            <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
+            <p>Tornado warning in your area!!</p>
+        </div>
     } else if(temp <=59 && temp >= 0 && main === "Clear") {
         return clothes = 
         <div className="clothes-boxes">
@@ -582,6 +588,12 @@ function Clothing(props) {
         <div className="thunderstorm">
             <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
             <p>Caution thunderstorm in your area!!</p>
+        </div>
+    } else if(temp <=59 && temp >= 0 && main === "Tornado" ) {
+        return clothes =
+        <div className="tornado">
+            <img src={`http://openweathermap.org/img/wn/${image}@2x.png`} alt=""/>
+            <p>Tornado warning in your area!!</p>
         </div>
     };
 
