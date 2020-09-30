@@ -1,18 +1,18 @@
 $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
 
-
 .weather-box {
   width: 80%;
   margin: 0 auto;
   margin-top: 60px;
 
-  background: rgba(255, 255, 255, 0.747);
+  background: rgba(255, 255, 255, 0.747) 4;
   border: 1px solid black;
   display: flex;
 
   justify-content: space-evenly;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
   box-shadow: 0 9px 13px -6px black;
 }
 
@@ -51,16 +51,15 @@ $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 }
 
 @media (max-width: 1200px) {
-    .city-box {
-      font-size: 30px;
-    }
+  .city-box {
+    font-size: 30px;
+  }
 
-    .category-box h1 {
-      font-size: 30px;
-    }
+  .category-box h1 {
+    font-size: 30px;
+  }
 
-    .category-box p {
-      font-size: 20px;
-    }
+  .category-box p {
+    font-size: 20px;
+  }
 }
-
