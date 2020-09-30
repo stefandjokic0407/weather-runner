@@ -150,6 +150,7 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
       }
  }
 
+<<<<<<< HEAD
 
  return (
   <div className="App">
@@ -172,6 +173,14 @@ const splicedHourly = mappedHourly.splice(0, mappedHourly.length - 23)
 
       <div className='hourlycontainer'>
         <button className='hourlybtn' onClick={previous}> &#8592; </button>
+=======
+  return (
+    <div className="App">
+      <SearchBar getWeather={fetchData} />
+      {isShowing ? (
+        <div>
+        <div className='hourlycontainer'>
+>>>>>>> 1475d9eaba24c72d952eb942614363ac6557d369
         {fsdgs()}
         <button className='hourlybtn' onClick={next}> &#8594; </button>
       </div>
