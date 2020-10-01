@@ -1,5 +1,5 @@
 import React from 'react';
-import './Clothing.scss';
+import './clothing.scss';
 
 function Clothing(props) {
     const temp = props.temp;
