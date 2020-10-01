@@ -25,7 +25,7 @@ function App() {
         <div>
           <header className="App-header">
             <div className="toggle">
-              <p>Toggle Dark Mode </p>
+              <p>Dark Mode </p>
               <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
             </div>
             <br></br>
