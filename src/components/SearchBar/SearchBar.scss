@@ -29,7 +29,7 @@ button {
   border-radius: 15px;
   background-color: white;
   margin-bottom: 30px;
-  width: 3%;
+  width: 6%;
   height: 50px;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-weight: bold;
@@ -40,7 +40,17 @@ button:hover {
   cursor: pointer;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1900px) {
+  input {
+    width: 20%;
+  }
+  
+  button {
+    width: 10%;
+  }
+}
+
+@media (max-width: 1300px) {
   input {
     width: 20%;
   }

@@ -35,10 +35,32 @@
     margin-top: 90px;
     font-size: 25px; }
 
+@media (max-width: 1900px) {
+  .city-box {
+    font-size: 30px;
+    border: none; }
+  .city-box img {
+    margin-top: 5%;
+    height: 40%;
+    width: 45%; }
+  .category-box {
+    border: black solid 1px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none; }
+  .category-box h1 {
+    font-size: 30px; }
+  .category-box p {
+    font-size: 20px; } }
+
 @media (max-width: 1300px) {
   .city-box {
     font-size: 30px;
     border: none; }
+  .city-box img {
+    margin-top: 10%;
+    height: 40%;
+    width: 45%; }
   .category-box {
     border: black solid 1px;
     border-top: none;
