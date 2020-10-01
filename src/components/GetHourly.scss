@@ -1,13 +1,14 @@
 .hourlycontainer {
     width: 85%;
+    height: 20vh;
     display: flex;
     margin: 0 auto;
     margin-top: 30px;
 }
 
 .hourly {
-    width: 12%;
-    font-size: 15px;
+    width: 13%;
+    font-size: 20px;
     margin: 0 auto;
     font-weight: bold;
     padding: .5%;
@@ -20,7 +21,7 @@
     }
 }
 .hourlybtn {
-    margin-top: 50px;
+    margin-top: 75px;
     font-size: 40px;
     font-weight: bolder;
     height: 60px;
@@ -28,6 +29,17 @@
 }
 .hourlybtn:hover {
     background-color: pink;
+}
+
+@media (max-width: 1300px) {
+    .hourly {
+        font-size: 19px;
+        word-wrap: break-word;
+    }
+
+    .hourlybtn {
+        margin-top: 11%;
+    }
 }
 
 
@@ -45,7 +57,7 @@
         font-weight: bolder;
         height: 40px;
         width: 30px;
-        margin-top: 10%;
+        margin-top: 12%;
         font-size: 15px;
     }
 }
@@ -58,7 +70,8 @@
 
     .hourly {
         width: 14%;
-        font-size: 5px;
+        height: 175px;
+        font-size: 4px;
         font-weight: initial;
         word-wrap: break-word;
         margin-left: 2px;
