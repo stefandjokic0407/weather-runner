@@ -5,12 +5,9 @@ $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 .weather-box {
   width: 80%;
   margin: 0 auto;
-  margin-top: 60px;
-
-  background: rgba(255, 255, 255, 0.747);
+  background: rgba(255, 255, 255, 0.479);
   border: 1px solid black;
   display: flex;
-
   justify-content: space-evenly;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   box-shadow: 0 9px 13px -6px black;
@@ -22,6 +19,10 @@ $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   font-size: 45px;
   font-weight: bolder;
   padding-bottom: 25px;
+  border: black solid 1px;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
 }
 
 .city-box img {
@@ -35,25 +36,66 @@ $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-  border: black solid 1px;
-  border-top: none;
-  border-bottom: none;
-  border-right: none;
+  
 
   h1 {
     font-size: 45px;
   }
 
   p {
-    margin-top: 55px;
+    margin-top: 90px;
     font-size: 25px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1900px) {
+  .city-box {
+    font-size: 30px;
+    border: none;
+  }
+
+  .city-box img {
+    margin-top: 5%;
+    height: 40%;
+    width: 45%;
+  }
+
+  .category-box {
+    border: black solid 1px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+  }
+
+
+  .category-box h1 {
+    font-size: 30px;
+  }
+
+  .category-box p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
     .city-box {
       font-size: 30px;
+      border: none;
     }
+
+    .city-box img {
+      margin-top: 10%;
+      height: 40%;
+      width: 45%;
+    }
+
+    .category-box {
+      border: black solid 1px;
+      border-top: none;
+      border-bottom: none;
+      border-right: none;
+    }
+
 
     .category-box h1 {
       font-size: 30px;
@@ -64,3 +106,70 @@ $primary-font: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     }
 }
 
+@media (max-width: 768px) {
+  .weather-box {
+    width: 90%;
+  }
+
+  .city-box {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .city-box img {
+    margin-top: 3%;
+    height: 40%;
+    width: 45%;
+  }
+
+  .category-box {
+    border: black solid 1px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+  }
+
+  .category-box h1 {
+    font-size: 20px;
+  }
+
+  .category-box p {
+    font-size: 15px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .weather-box {
+    width: 90%;
+    margin-top: 5px;
+  }
+
+  .city-box {
+    padding: 2%;
+    font-size: 17px;
+    margin-top: 6px;
+  }
+
+  .city-box img {
+    margin-top: 8%;
+    height: 45%;
+    width: 45%;
+  }
+
+  .category-box {
+    border: black solid 1px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+  }
+
+  .category-box h1 {
+    font-size: 17px;
+  }
+
+  .category-box p {
+    font-size: 12px;
+    margin-top: 40px;
+  }
+}
